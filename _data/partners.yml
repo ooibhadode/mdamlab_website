@@ -1,0 +1,48 @@
+# ---------------------------------------------------------------
+#  PARTNERS — logos live in assets/images/partners/
+# ---------------------------------------------------------------
+
+- category: Funding
+  items:
+    - name: Natural Sciences and Engineering Research Council of Canada (NSERC)
+      logo: nserc.png
+      url: https://www.nserc-crsng.gc.ca/
+    - name: Mitacs
+      logo: mitacs.png
+      url: https://www.mitacs.ca/
+    - name: Alberta Innovates
+      logo: ai.png
+      url: https://albertainnovates.ca/
+
+- category: Industry
+  items:
+    - name: Groupe Meloche
+      logo: meloche.png
+      url: https://www.melocheinc.com/
+    - name: voestalpine Additive Manufacturing Centre
+      logo: voest.png
+      url: https://www.voestalpine.com/highperformancemetals/en-gl/services/additive-manufacturing/
+    - name: InnoTech Alberta
+      logo: innotech.png
+      url: https://innotechalberta.ca/
+    - name: Davey Textile Solutions
+      logo: davey.png
+      url: https://daveytextiles.com/
+
+- category: Academic
+  items:
+    - name: ADaMS Lab, University of Alberta
+      logo: adams.png
+      url: https://www.adams-lab.ca/
+    - name: SMART Lab, University of Alberta
+      logo: smart.png
+      url: https://rafiqahmads.com/
+    - name: ANGAM Lab, University of Alberta
+      logo: angam.png
+      url: https://angam-ualberta.ca/
+
+- category: Networks & memberships
+  items:
+    - name: HI-AM 2.0 — Holistic Innovation in Additive Manufacturing
+      logo: hiam.png
+      url: https://hiam.uwaterloo.ca/

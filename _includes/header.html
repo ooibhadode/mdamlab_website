@@ -1,0 +1,39 @@
+<div class="utility">
+  <div class="wrap">
+    <div class="u-left">
+      {{ site.department }}<span> · Faculty of Engineering</span> ·
+      <a href="{{ site.university_url }}">{{ site.university }}</a>
+    </div>
+    <div class="u-right"><a href="mailto:{{ site.email }}">{{ site.email }}</a></div>
+  </div>
+</div>
+
+<header class="site-header">
+  <div class="wrap">
+    <div class="brands">
+      <a class="ua-brand" href="{{ site.university_url }}" title="University of Alberta">
+        <img src="{{ '/assets/images/brand/ualberta-green.png' | relative_url }}" alt="University of Alberta">
+      </a>
+      <a class="brand" href="{{ '/' | relative_url }}">
+        <img src="{{ '/assets/images/brand/mdam-logo.png' | relative_url }}" alt="MDAM — Multifunctional Design &amp; Additive Manufacturing Lab, home" width="900" height="165">
+      </a>
+    </div>
+
+    <button class="nav-toggle" aria-expanded="false" aria-controls="site-nav">Menu</button>
+
+    <nav class="site-nav" id="site-nav" aria-label="Main">
+      <ul>
+        {% for item in site.data.navigation %}
+          {% if item.external %}
+            <li class="push"><a class="ext" href="{{ item.url }}" target="_blank" rel="noopener">{{ item.title }}</a></li>
+          {% else %}
+            {% assign here = false %}
+            {% if page.url == item.url %}{% assign here = true %}{% endif %}
+            {% if item.url == '/news/' and page.layout == 'post' %}{% assign here = true %}{% endif %}
+            <li><a href="{{ item.url | relative_url }}"{% if here %} aria-current="page"{% endif %}>{{ item.title }}</a></li>
+          {% endif %}
+        {% endfor %}
+      </ul>
+    </nav>
+  </div>
+</header>

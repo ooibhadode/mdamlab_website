@@ -1,0 +1,37 @@
+---
+title: Software
+permalink: /software/
+heading: Software &amp; code
+lede: >-
+  Tools we have built for topology optimization and lattice design. Most are
+  open source — use them in your teaching and research, and tell us how they
+  work for you.
+---
+
+{% for tool in site.data.software %}
+<section class="tool" id="{{ tool.name | slugify }}">
+  <div>
+    <h2>{{ tool.name }}</h2>
+    <p class="sub">{{ tool.full_name }}</p>
+    <p class="meta">{{ tool.language }}</p>
+    <p>{{ tool.summary }}</p>
+    <div class="actions">
+      {% assign main = tool.links | first %}
+      <a class="btn" href="{{ main.url }}">{{ main.label }}</a>
+      {% if tool.paper %}<a class="btn ghost" href="{{ tool.paper }}">Read the paper</a>{% endif %}
+    </div>
+    {% if tool.links.size > 1 %}
+    <ul class="extra">
+      {% for l in tool.links offset:1 %}<li><a href="{{ l.url }}">{{ l.label }}</a></li>{% endfor %}
+    </ul>
+    {% endif %}
+  </div>
+  {% if tool.images %}
+  <div class="shots{% if tool.images.size > 1 %} two{% endif %}">
+    {% for im in tool.images %}
+    <figure><img src="{{ '/assets/images/software/' | append: im | relative_url }}" alt="{{ tool.name }} screenshot {{ forloop.index }}" loading="lazy"></figure>
+    {% endfor %}
+  </div>
+  {% endif %}
+</section>
+{% endfor %}

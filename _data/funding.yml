@@ -1,0 +1,39 @@
+# ---------------------------------------------------------------
+#  JOIN US — external funding programs prospective members can apply to
+# ---------------------------------------------------------------
+
+- level: Postdoctoral fellows
+  items:
+    - name: Killam and Grant Notley Postdoctoral Fellowships
+      note: University of Alberta
+      url: https://www.ualberta.ca/graduate-studies/awards-and-funding/postdoctoral-fellow-funding/killam.html
+    - name: Banting Postdoctoral Fellowships
+      note: Government of Canada
+      url: https://banting.fellowships-bourses.gc.ca/en/home-accueil.html
+    - name: NSERC Postdoctoral Fellowships
+      note: Natural Sciences and Engineering Research Council of Canada
+      url: https://www.nserc-crsng.gc.ca/Students-Etudiants/PD-NP/index_eng.asp
+    - name: Alberta Innovates Postdoctoral Fellowships
+      note: For postdocs at Alberta institutions
+      url: https://www.ualberta.ca/graduate-studies/awards-and-funding/postdoctoral-fellow-funding/alberta-innovates-postdoctoral-fellowships/index.html
+
+- level: Graduate students
+  items:
+    - name: NSERC scholarships for graduate students
+      note: Master's and doctoral students at Canadian institutions
+      url: https://www.nserc-crsng.gc.ca/Students-Etudiants/Index_eng.asp
+    - name: University of Alberta graduate awards
+      note: Faculty of Graduate & Postdoctoral Studies
+      url: https://www.ualberta.ca/graduate-studies/awards-and-funding/index.html
+
+- level: Undergraduate students
+  items:
+    - name: Mitacs Globalink Research Internship
+      note: International undergraduates
+      url: https://www.mitacs.ca/en/programs/globalink/globalink-research-internship
+    - name: NSERC Undergraduate Student Research Awards (USRA)
+      note: Undergraduates at Canadian institutions
+      url: https://www.nserc-crsng.gc.ca/students-etudiants/ug-pc/usra-brpc_eng.asp
+    - name: Dean's Research Award
+      note: Undergraduates in Engineering at the University of Alberta
+      url: https://www.ualberta.ca/engineering/research/undergraduate-student-research/deans-research-awards.html

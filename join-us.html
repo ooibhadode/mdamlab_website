@@ -1,0 +1,33 @@
+---
+title: Join Us
+permalink: /join-us/
+heading: Join the lab
+lede: >-
+  Thank you for your interest in the MDAM Lab. We are not actively hiring at
+  the moment, but we are always happy to hear from motivated people.
+---
+
+<div class="callout">
+  <p><strong>Before you write.</strong> Send a short email to <a href="mailto:{{ site.email }}">{{ site.email }}</a> with your CV, the position you're interested in (postdoc, graduate or undergraduate), and a few sentences on how your interests connect to <a href="{{ '/research/' | relative_url }}">our research</a>. Candidates who hold — or plan to apply for — external funding are especially encouraged; the programs below are a good place to start.</p>
+</div>
+
+<h2 style="margin-bottom:1.6rem">Funding opportunities</h2>
+<div class="cols-3">
+  {% for level in site.data.funding %}
+  <section class="fund">
+    <h3>{{ level.level }}</h3>
+    <ul>
+      {% for f in level.items %}
+      <li><a href="{{ f.url }}">{{ f.name }}</a><span>{{ f.note }}</span></li>
+      {% endfor %}
+    </ul>
+  </section>
+  {% endfor %}
+</div>
+
+<hr>
+
+<div class="narrow">
+  <h2>Graduate studies at the University of Alberta</h2>
+  <p>Prospective MSc and PhD students apply through the Department of Mechanical Engineering. Admission requirements, deadlines and application steps are on the department's graduate program website. Please mention the MDAM Lab and Dr. Ibhadode in your application.</p>
+</div>

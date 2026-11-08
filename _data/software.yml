@@ -1,0 +1,90 @@
+# ---------------------------------------------------------------
+#  SOFTWARE — open tools developed in or with the lab
+#  links: list of {label, url}. The first link is the main button.
+#  images: files inside assets/images/software/
+# ---------------------------------------------------------------
+
+- name: StrutGen
+  full_name: Strut- and Plate-type Lattice Generator
+  summary: >-
+    Generates strut-based and plate-based lattice structures for additive
+    manufacturing using coordinate-driven implicit modelling — straight struts,
+    curved struts and plate lattices from one framework.
+  language: Open source
+  paper: https://doi.org/10.1007/s00170-026-18105-6
+  images: [strutgen1.jpg, strutgen2.jpg]
+  links:
+    - label: Download StrutGen
+      url: https://linktr.ee/strutgen
+
+- name: Optiworks
+  full_name: A simple software solution for topology optimization
+  summary: >-
+    A desktop application that walks a user through domain set-up, loads and
+    boundary conditions, and high-resolution topology optimization — built so
+    that newcomers and experienced designers can both get to a result quickly.
+  language: Windows application
+  paper: https://doi.org/10.1016/j.dte.2025.100041
+  images: [optiworks1.jpg, optiworks2.jpg]
+  links:
+    - label: Download for Windows
+      url: https://2ly.link/1yWFz
+    - label: "Tutorial: rectangular domain"
+      url: https://drive.google.com/file/d/1WqVtsKZuPaypnI-_a50yS_Zh1yohcdv-/view?usp=sharing
+    - label: "Tutorial: custom domain"
+      url: https://drive.google.com/file/d/1G5d7zyeYQIA45uOmDU3cW1O6IrW6inLu/view?usp=sharing
+    - label: "Tutorial: preparing a custom domain"
+      url: https://drive.google.com/file/d/1WsyBgAXhZ2_rCPXlaXr0jcQrt-Uv0fI_/view?usp=sharing
+    - label: Send feedback
+      url: https://docs.google.com/forms/d/e/1FAIpQLSffhzU6AUc5cuqpFsQUG8yTwfqinxEKl-UfV4qPARJnsxBPaw/viewform
+
+- name: FreeTO
+  full_name: Freeform 3D topology optimization
+  summary: >-
+    Open-source MATLAB code for 3D topology optimization on a structured
+    hexahedral mesh, producing smooth boundaries, with tools for
+    initialization and post-processing.
+  language: MATLAB
+  paper: https://doi.org/10.1016/j.advengsoft.2024.103790
+  images: [freeto.jpg]
+  links:
+    - label: Code on GitHub
+      url: https://github.com/ooibhadode/FreeTO
+
+- name: LattGen
+  full_name: TPMS lattice generator
+  summary: >-
+    Creates triply periodic minimal surface (TPMS) lattices from 30 predefined
+    unit cells with uniform or graded density, fills imported meshes with
+    lattice, and exports STL files ready for printing.
+  language: Open source
+  paper: https://doi.org/10.1016/j.simpa.2024.100665
+  images: [lattgen.jpg]
+  links:
+    - label: Code on GitHub
+      url: https://github.com/hiilda/TPMS-Lattice-Generator-LattGen-
+
+- name: IbIPP
+  full_name: Image-based initialization and post-processing for topology optimization
+  summary: >-
+    MATLAB code that turns an image of a design domain into a topology
+    optimization problem, and turns the optimized result back into a
+    smooth, usable geometry.
+  language: MATLAB
+  paper: https://doi.org/10.1016/j.softx.2021.100701
+  images: [ibipp.jpg]
+  links:
+    - label: Code on GitHub
+      url: https://github.com/CADmaniac/IbIPP
+
+- name: TopADD
+  full_name: Topology optimization for arbitrary design domains
+  summary: >-
+    A 2D/3D topology optimization framework built on PETSc for parallel
+    computing, handling arbitrary (non-rectangular) design domains at large scale.
+  language: C / PETSc
+  paper: https://doi.org/10.1007/s00158-021-02917-z
+  images: [topadd.jpg]
+  links:
+    - label: Code on GitHub
+      url: https://github.com/wonderfulzzd/TopADD_2D_3D_Arbitrary_TopOpt_in_PETSc

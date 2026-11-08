@@ -1,0 +1,177 @@
+---
+layout: default
+title: Multifunctional Design & Additive Manufacturing Lab
+---
+
+<section class="hero">
+  <div class="wrap hero-grid">
+    <div class="hero-text">
+      <h1>Designing next&#8209;generation structures for advanced manufacturing.</h1>
+      <p class="lede">
+        The Multifunctional Design &amp; Additive Manufacturing (MDAM) Lab develops
+        design methods for Industry&nbsp;4.0 — topology optimization, lattice and porous
+        structures, and process-aware design — and extends them to multiphysics
+        problems such as heat transfer, fluid flow and biomechanics.
+      </p>
+      <div class="actions">
+        <a class="btn" href="{{ '/research/' | relative_url }}">Explore our research</a>
+        <a class="btn ghost" href="{{ '/publications/' | relative_url }}">Publications</a>
+      </div>
+    </div>
+    <figure class="hero-figure">
+      <div class="plate">
+        <img src="{{ '/assets/images/research/copper-heatsink.jpg' | relative_url }}" alt="A copper heat sink with topology-optimized conformal lattice fins, made by electrochemical additive manufacturing" width="1280" height="883">
+      </div>
+      <figcaption>A heat sink designed with topology-optimization-driven conformal lattices and built by electrochemical additive manufacturing (ECAM). <span class="muted">Orakwe et al., 2024.</span></figcaption>
+    </figure>
+  </div>
+
+</section>
+
+<section class="section tint">
+  <div class="wrap">
+    <div class="section-head">
+      <h2>Research themes</h2>
+      <a class="more" href="{{ '/research/' | relative_url }}">All research</a>
+    </div>
+    <div class="themes">
+      <a class="theme" href="{{ '/research/#topology-optimization' | relative_url }}">
+        <div class="thumb"><img src="{{ '/assets/images/research/topopt-home.jpg' | relative_url }}" alt="" loading="lazy"></div>
+        <div class="theme-body">
+          <h3>Topology optimization</h3>
+          <p>Multiphysics and multi-objective methods that find the best layout of material — from brackets to heat exchangers and implants.</p>
+        </div>
+      </a>
+      <a class="theme" href="{{ '/research/#lattices' | relative_url }}">
+        <div class="thumb"><img src="{{ '/assets/images/research/gyroid-printed.jpg' | relative_url }}" alt="" loading="lazy"></div>
+        <div class="theme-body">
+          <h3>Lattice &amp; porous structures</h3>
+          <p>Strut, plate and TPMS lattices for lightweighting, energy absorption, bone scaffolds and heat transfer.</p>
+        </div>
+      </a>
+      <a class="theme" href="{{ '/research/#thermal' | relative_url }}">
+        <div class="thumb"><img src="{{ '/assets/images/research/copper-heatsink-printed.jpg' | relative_url }}" alt="" class="cover" loading="lazy"></div>
+        <div class="theme-body">
+          <h3>Thermal–fluid design</h3>
+          <p>Heat sinks and heat exchangers that pair optimized topology with minimal-surface lattices for electronics cooling.</p>
+        </div>
+      </a>
+      <a class="theme" href="{{ '/research/#process' | relative_url }}">
+        <div class="thumb"><img src="{{ '/assets/images/research/waam-cell.jpg' | relative_url }}" alt="" loading="lazy"></div>
+        <div class="theme-body">
+          <h3>Process modelling &amp; AI</h3>
+          <p>Fast distortion and residual-stress models and data-driven surrogates, built into the design loop so parts print right.</p>
+        </div>
+      </a>
+    </div>
+  </div>
+</section>
+
+<section class="section">
+  <div class="wrap">
+    <div class="section-head">
+      <h2>News</h2>
+      <a class="more" href="{{ '/news/' | relative_url }}">All news</a>
+    </div>
+    <div class="news-grid">
+      {% assign lead = site.posts | where_exp: "p", "p.image" | first %}
+      <a class="news-lead" href="{{ lead.url | relative_url }}">
+        <img src="{{ lead.image | relative_url }}" alt="{{ lead.image_alt }}" loading="lazy">
+        <time datetime="{{ lead.date | date_to_xmlschema }}">{{ lead.date | date: '%B %Y' }}</time>
+        <h3>{{ lead.title }}</h3>
+        <p>{{ lead.excerpt | strip_html | truncatewords: 30 }}</p>
+      </a>
+      <ul class="news-list">
+        {% assign shown = 0 %}
+        {% for post in site.posts %}
+          {% if post.url == lead.url %}{% continue %}{% endif %}
+          {% if shown == 4 %}{% break %}{% endif %}
+          {% assign shown = shown | plus: 1 %}
+          <li>
+            <time datetime="{{ post.date | date_to_xmlschema }}">{{ post.date | date: '%b %Y' }}</time>
+            <div>
+              <a href="{{ post.url | relative_url }}">{{ post.title }}</a>
+              <p>{{ post.excerpt | strip_html | truncatewords: 18 }}</p>
+            </div>
+          </li>
+        {% endfor %}
+      </ul>
+    </div>
+  </div>
+</section>
+
+<section class="section tint">
+  <div class="wrap">
+    <div class="section-head">
+      <h2>Selected publications</h2>
+      <a class="more" href="{{ '/publications/' | relative_url }}">All publications</a>
+    </div>
+    <ol class="pubs home-pubs">
+      {% for p in site.data.publications.journal limit:4 %}{% include pub.html p=p show_year="yes" %}{% endfor %}
+    </ol>
+  </div>
+</section>
+
+<section class="section">
+  <div class="wrap">
+    <div class="section-head">
+      <h2>Open-source software</h2>
+      <a class="more" href="{{ '/software/' | relative_url }}">All tools</a>
+    </div>
+    <div class="tool-grid">
+      {% for tool in site.data.software %}
+      <a class="tool-card" href="{{ '/software/' | relative_url }}#{{ tool.name | slugify }}">
+        <div class="shot">{% if tool.images %}<img src="{{ '/assets/images/software/' | append: tool.images.first | relative_url }}" alt="" loading="lazy">{% endif %}</div>
+        <div>
+          <strong>{{ tool.name }}</strong>
+          <span>{{ tool.full_name }}</span>
+        </div>
+      </a>
+      {% endfor %}
+    </div>
+  </div>
+</section>
+
+<section class="section tint">
+  <div class="wrap">
+    <div class="section-head">
+      <h2>The team</h2>
+      <a class="more" href="{{ '/team/' | relative_url }}">Meet everyone</a>
+    </div>
+    <div class="faces">
+      {% for p in site.data.team.people %}{% unless p.group == 'alumni' %}
+      {% assign g = site.data.team.groups | where: 'id', p.group | first %}
+      {% assign parts = p.name | split: ' ' %}
+      <a class="face" href="{{ '/team/' | relative_url }}#{{ p.group }}">
+        {% if p.photo %}<img src="{{ '/assets/images/people/' | append: p.photo | relative_url }}" alt="" width="480" height="552" loading="lazy">{% else %}<div class="initials">{{ parts.first | slice: 0 }}{{ parts.last | slice: 0 }}</div>{% endif %}
+        <strong>{{ p.name }}</strong>
+        <span>{% if p.group == 'msc' %}{{ p.role }}{% else %}{{ g.label }}{% endif %}</span>
+      </a>
+      {% endunless %}{% endfor %}
+    </div>
+  </div>
+</section>
+
+<section class="partners-strip">
+  <div class="wrap">
+    <h2>Partners &amp; funders</h2>
+    <ul>
+      {% for group in site.data.partners %}{% for p in group.items %}
+      <li><a href="{{ p.url }}" title="{{ p.name }}"><img src="{{ '/assets/images/partners/' | append: p.logo | relative_url }}" alt="{{ p.name }}" loading="lazy"></a></li>
+      {% endfor %}{% endfor %}
+    </ul>
+  </div>
+</section>
+
+<section class="band">
+  <div class="wrap">
+    <div>
+      <h2>Interested in joining?</h2>
+      <p>We are not actively recruiting right now, but we're always glad to hear from motivated students and postdocs — especially those bringing their own funding. Write to <a href="mailto:{{ site.email }}">{{ site.email }}</a>.</p>
+    </div>
+    <div class="actions">
+      <a class="btn" href="{{ '/join-us/' | relative_url }}">Funding opportunities</a>
+      <a class="btn ghost" href="mailto:{{ site.email }}">Email the lab</a>
+    </div>
+  </div>
+</section>

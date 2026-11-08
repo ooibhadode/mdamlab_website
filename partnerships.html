@@ -1,0 +1,28 @@
+---
+title: Partnerships
+permalink: /partnerships/
+heading: Partners &amp; funding
+lede: >-
+  Our research is supported by public funding agencies and carried out with
+  industry and academic partners. We're grateful to all of them.
+---
+
+{% for group in site.data.partners %}
+<section class="partner-group">
+  <h2>{{ group.category }}</h2>
+  <ul class="logos">
+    {% for p in group.items %}
+    <li>
+      <a href="{{ p.url }}">
+        <div class="lg"><img src="{{ '/assets/images/partners/' | append: p.logo | relative_url }}" alt="{{ p.name }} logo" loading="lazy"></div>
+        <span>{{ p.name }}</span>
+      </a>
+    </li>
+    {% endfor %}
+  </ul>
+</section>
+{% endfor %}
+
+<div class="callout">
+  <p><strong>Working with industry.</strong> We collaborate with companies on design for additive manufacturing — from lightweight tooling and fixtures to thermal management — often through Mitacs and NSERC partnership programs that share the cost of the research. If you have a problem you think we could help with, email <a href="mailto:{{ site.email }}">{{ site.email }}</a>.</p>
+</div>

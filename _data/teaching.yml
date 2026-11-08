@@ -1,0 +1,33 @@
+# ---------------------------------------------------------------
+#  TEACHING — courses taught by Dr. Ibhadode
+#  Move a course from `current` to `previous` once the term ends.
+# ---------------------------------------------------------------
+
+current:
+  - code: MEC E 675
+    title: Product Design and Optimization for Additive Manufacturing
+    terms: Fall 2026
+    description: >-
+      Graduate course on designing parts for additive manufacturing:
+      topology optimization, lattice and porous structures, and the process
+      constraints that decide whether a design can actually be printed.
+
+upcoming: []
+  # - code: MEC E 563
+  #   title: Finite Element Method for Mechanical Engineering
+  #   terms: Winter 2027
+  #   url: https://apps.ualberta.ca/catalogue/course/mec_e/563
+
+previous:
+  - code: MEC E 663
+    title: Theory and Applications in Finite Element Method
+    terms: Fall 2025, Fall 2024
+    url: https://apps.ualberta.ca/catalogue/course/mec_e/663
+  - code: MEC E 563
+    title: Finite Element Method for Mechanical Engineering
+    terms: Winter 2026, Winter 2023
+    url: https://apps.ualberta.ca/catalogue/course/mec_e/563
+  - code: MEC E 364
+    title: Manufacturing Processes
+    terms: Winter 2026, Winter 2025, Winter 2024, Winter 2023
+    url: https://apps.ualberta.ca/catalogue/course/mec_e/364

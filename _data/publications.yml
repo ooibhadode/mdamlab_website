@@ -1,0 +1,335 @@
+# ---------------------------------------------------------------
+#  PUBLICATIONS
+#  Add new items at the TOP of the relevant list.
+#  Fields: title, authors, venue, details (volume/pages), year,
+#          doi (just the 10.xxxx/... part) OR url (any link),
+#          note (optional, e.g. an award).
+# ---------------------------------------------------------------
+
+journal:
+  - title: Performance evaluation of architected multi-morphological TPMS structures for liquid-cooled heat sinks
+    authors: A. Hassanirad, C.C. Kwasi-Effah, O. Ibhadode
+    venue: International Journal of Heat and Mass Transfer
+    details: "272, 129515"
+    year: 2026
+    doi: 10.1016/j.ijheatmasstransfer.2026.129515
+
+  - title: Microstructural and mechanical characterization of a CMT-WAAM fabricated 17-4PH stainless steel/Inconel 625 bimetallic structure
+    authors: M. Irfan, M. Keshmiri, S. Singh, A. Abubakar, S.U. Butt, Y.F. Fu, A.F. Arif, O. Ibhadode, A.J. Qureshi
+    venue: Journal of Manufacturing and Materials Processing
+    details: "10(7), 220"
+    year: 2026
+    doi: 10.3390/jmmp10070220
+
+  - title: Effect of topology-optimized support structures on the quality of Inconel 718 parts made by laser powder bed fusion additive manufacturing
+    authors: Z.D. Zhang, D.Y. Yu, X.Y. Zhai, Q. Ren, O. Ibhadode, Y.Z. Huang, Y.N. Xue, T. Gao, J.H. Zhu, W.H. Zhang
+    venue: Journal of Manufacturing Processes
+    details: "167, 368–382"
+    year: 2026
+    doi: 10.1016/j.jmapro.2026.03.068
+
+  - title: Coordinate-driven implicit modeling of straight-strut, curved-strut and plate-type lattice structures for additive manufacturing
+    authors: A. Inoma, O. Ibhadode
+    venue: The International Journal of Advanced Manufacturing Technology
+    details: "144, 4621–4644"
+    year: 2026
+    doi: 10.1007/s00170-026-18105-6
+
+  - title: Thermo-hydraulic performance of uniform and hybrid triply periodic minimal surface (TPMS) heat exchangers
+    authors: A. Hassanirad, C.C. Kwasi-Effah, O. Ibhadode
+    venue: Journal of Advanced Joining Processes
+    details: "12"
+    year: 2025
+    # TODO: add DOI or url
+
+  - title: Data-driven parameter optimization for bead geometry in wire arc additive manufacturing of 17-4 PH stainless steel
+    authors: M. Irfan, Y.F. Fu, S. Singh, S.U. Butt, A.F. Arif, O. Ibhadode, A. Qureshi
+    venue: Journal of Advanced Joining Processes
+    details: "12, 100319"
+    year: 2025
+    doi: 10.1016/j.jajp.2025.100319
+
+  - title: A novel dual curved cubic (DCC) structure with improved compressive strength
+    authors: A. Inoma, O. Ibhadode
+    venue: International Journal of Mechanical Sciences
+    details: "294, 110186"
+    year: 2025
+    doi: 10.1016/j.ijmecsci.2025.110186
+
+  - title: An integration of topology optimization and conformal minimal surfaces for additively manufactured liquid-cooled heat sinks
+    authors: J.N. Orakwe, S.I. Shahabad, O. Ibhadode, A. Bonakdar, E. Toyserkani
+    venue: Additive Manufacturing
+    details: "107, 104814"
+    year: 2025
+    doi: 10.1016/j.addma.2025.104814
+
+  - title: "Optiworks: A human-centric framework for high-resolution topology optimization"
+    authors: C. Ifediorah, O. Ibhadode
+    venue: Digital Engineering
+    details: "4, 100041"
+    year: 2025
+    doi: 10.1016/j.dte.2025.100041
+
+  - title: "TopADDPi: An affordable and sustainable Raspberry Pi cluster for parallel-computing topology optimization"
+    authors: Z.D. Zhang, D.Y. Yu, O. Ibhadode, L. Meng, T. Gao, J.H. Zhu, W.H. Zhang
+    venue: Processes
+    details: "13(3), 633"
+    year: 2025
+    doi: 10.3390/pr13030633
+
+  - title: Optimized structural design of a reciprocating wing for the reciprocating airfoil (RA)-driven vertical take-off and landing (VTOL) aircraft
+    authors: J.I. Okoduwa, O.O. Ibhadode, Y. Cao
+    venue: Actuators
+    details: "14, 104"
+    year: 2025
+    doi: 10.3390/act14030104
+
+  - title: "FreeTO — Freeform 3D topology optimization using a structured mesh with smooth boundaries in MATLAB"
+    authors: O. Ibhadode, Y.F. Fu, A. Qureshi
+    venue: Advances in Engineering Software
+    details: "198, 103790"
+    year: 2024
+    doi: 10.1016/j.advengsoft.2024.103790
+
+  - title: Thermo-hydraulic performance characteristics of novel G-Prime and FRD triply periodic minimal surface (TPMS) geometries
+    authors: C.C. Kwasi-Effah, O. Ibhadode, A. Qureshi
+    venue: International Communications in Heat and Mass Transfer
+    details: "159, 108226"
+    year: 2024
+    doi: 10.1016/j.icheatmasstransfer.2024.108226
+
+  - title: "LattGen: A TPMS lattice generation tool"
+    authors: H. Chris-Amadin, O. Ibhadode
+    venue: Software Impacts
+    details: "21, 100665"
+    year: 2024
+    doi: 10.1016/j.simpa.2024.100665
+
+  - title: High-resolution inherent strain method using actual layer thickness in laser powder bed fusion additive manufacturing with experimental validations
+    authors: Z.D. Zhang, O. Ibhadode, S.I. Shahabad, X.Y. Zhai, D.Y. Yu, T. Gao, J.H. Zhu, W.H. Zhang
+    venue: Journal of Materials Research and Technology
+    details: "30, 6576–6595"
+    year: 2024
+    doi: 10.1016/j.jmrt.2024.05.047
+
+  - title: The effects of cell stretching on the thermal and flow characteristics of triply periodic minimal surfaces
+    authors: O. Ibhadode
+    venue: International Communications in Heat and Mass Transfer
+    details: "153, 107364"
+    year: 2024
+    doi: 10.1016/j.icheatmasstransfer.2024.107364
+
+  - title: Topology optimized infill compliant mechanisms for improved output displacements
+    authors: O. Ibhadode, K. Nsiempba, Z. Zhang, E. Toyserkani
+    venue: Optimization and Engineering
+    details: "25, 413–437"
+    year: 2024
+    doi: 10.1007/s11081-023-09809-9
+
+  - title: "A post-topology optimization process for overhang elimination in additive manufacturing: design workflow and experimental investigation"
+    authors: O. Ibhadode, Z. Zhang, A. Bonakdar, E. Toyserkani
+    venue: The International Journal of Advanced Manufacturing Technology
+    year: 2023
+    doi: 10.1007/s00170-023-12282-4
+
+  - title: Topological fidelity of additively manufactured AlSi10Mg gyroid structures
+    authors: O. Ibhadode, I.Z. Rishmawi, M. Kirby, M. Vlasea, S. Winkler
+    venue: Journal of Manufacturing Processes
+    details: "108, 671–684"
+    year: 2023
+    doi: 10.1016/j.jmapro.2023.11.033
+
+  - title: "Topology optimization for metal additive manufacturing: current trends, challenges, and future outlook"
+    authors: O. Ibhadode, Z. Zhang, J. Sixt, K.M. Nsiempba, J. Orakwe, A. Martinez-Marchese, O. Ero, S.I. Shahabad, A. Bonakdar, E. Toyserkani
+    venue: Virtual and Physical Prototyping
+    details: "18"
+    year: 2023
+    doi: 10.1080/17452759.2023.2181192
+
+  - title: 3-Dimensional heat transfer modeling for laser powder bed fusion additive manufacturing using parallel computing and adaptive mesh
+    authors: Z. Zhang, S.I. Shahabad, O. Ibhadode, C. Dibia, A. Bonakdar, E. Toyserkani
+    venue: Optics & Laser Technology
+    details: "158, 108839"
+    year: 2023
+    doi: 10.1016/j.optlastec.2022.108839
+
+  - title: Additively manufactured metallic biomaterials
+    authors: E. Davoodi, H. Montazerian, A.S. Mirhakimi, M. Zhianmanesh, O. Ibhadode, S.I. Shahabad, R. Esmaeilizadeh, E. Sarikhani, S. Toorandaz, S.A.P. Sarabi, R. Nasiri, Y. Zhu, J. Kadkhodapour, B. Li, A. Khademhosseini, E. Toyserkani
+    venue: Bioactive Materials
+    details: "15, 214–249"
+    year: 2022
+    doi: 10.1016/j.bioactmat.2021.12.027
+
+  - title: "TopADD: a 2D/3D integrated topology optimization parallel-computing framework for arbitrary design domains"
+    authors: Z. Zhang, O. Ibhadode, A. Bonakdar, E. Toyserkani
+    venue: Structural and Multidisciplinary Optimization
+    year: 2021
+    doi: 10.1007/s00158-021-02917-z
+
+  - title: IbIPP for topology optimization — an image-based initialization and post-processing code written in MATLAB
+    authors: O. Ibhadode, Z. Zhang, A. Bonakdar, E. Toyserkani
+    venue: SoftwareX
+    details: "14, 100701"
+    year: 2021
+    doi: 10.1016/j.softx.2021.100701
+
+  - title: "Additive manufacture of porous ceramic proximal interphalangeal (PIP) joint implant: design and process optimization"
+    authors: E. Sheydaeian, O. Ibhadode, E. Hu, R. Pilliar, R. Kandel, E. Toyserkani
+    venue: The International Journal of Advanced Manufacturing Technology
+    details: "115(9–10), 2825–2837"
+    year: 2021
+    doi: 10.1007/s00170-021-07283-0
+
+  - title: Load prediction on metal forming process (tube sinking) using finite element method
+    authors: A. Ogbeyemi, I. Okoh, O. Imuero, O. Ibhadode, J. Akpobi
+    venue: The International Journal of Advanced Manufacturing Technology
+    year: 2021
+    doi: 10.1007/s00170-021-06907-9
+
+  - title: Topology optimization parallel-computing framework based on the inherent strain method for support structure design in laser powder-bed fusion additive manufacturing
+    authors: Z. Zhang, O. Ibhadode, U. Ali, C.F. Dibia, P. Rahnama, A. Bonakdar, E. Toyserkani
+    venue: International Journal of Mechanics and Materials in Design
+    year: 2020
+    doi: 10.1007/s10999-020-09494-x
+
+  - title: Topology optimization of structures under design-dependent pressure loads by a boundary identification-load evolution (BILE) model
+    authors: O. Ibhadode, Z. Zhang, P. Rahnama, A. Bonakdar, E. Toyserkani
+    venue: Structural and Multidisciplinary Optimization
+    details: "62, 1865–1883"
+    year: 2020
+    doi: 10.1007/s00158-020-02582-8
+
+  - title: The perception and deployment of 3D printing in the Nigerian educational sector for science and engineering programs
+    authors: A.O. Inoma, O. Ibhadode, A.A.O. Ibhadode
+    venue: Scientific African
+    details: "10, e00641"
+    year: 2020
+    doi: 10.1016/j.sciaf.2020.e00641
+
+  - title: Performance characterization of gas-solid cyclone for separation of particle from syngas produced from food waste gasifier plant
+    authors: O. Ibhadode, E. Ogedengbe, M. Rosen
+    venue: European Journal of Sustainable Development Research
+    year: 2017
+    url: https://www.ejosdr.com/download/479PU6K7.pdf
+
+  - title: Development of a computer-aided beam deflection analysis (CABDA) program for simply supported loaded beams
+    authors: O. Ibhadode, I.M. Dagwa, J.O. Asibor, E. Omo-Oghogho
+    venue: International Journal of Engineering Research in Africa
+    details: "30, 23–38"
+    year: 2017
+    url: https://www.scientific.net/JERA.30.23
+
+  - title: Investigating the calibration curves for a two-component cutting tool lathe dynamometer using finite element analysis
+    authors: O. Ibhadode, I.M. Dagwa, A.O.A. Ibhadode
+    venue: International Journal of Engineering Research in Africa
+    details: "24, 71–84"
+    year: 2016
+    url: https://www.scientific.net/JERA.24.71
+
+  - title: Preliminary design for solid waste incineration for power generation in Benin Metropolis, Nigeria
+    authors: D. Igbinomwanhia, O. Ibhadode, P. Akhator
+    venue: Advanced Materials Research
+    details: "824, 630–634"
+    year: 2013
+    url: https://www.scientific.net/AMR.824.630
+
+conference:
+  - title: A hybrid topology optimization and parametric design framework for electrochemical additive manufacturing (ECAM)-enabled field-driven heat sink architectures
+    authors: J.N. Orakwe, X. Yin, O. Ibhadode, E. Toyserkani
+    venue: 25th IEEE ITherm Conference, Orlando, USA
+    year: 2026
+
+  - title: Topology optimization and lattice-based multifunctional design for additive manufacturing
+    authors: O. Ibhadode   # TODO: confirm — the old site listed no authors
+    venue: 3rd International Conference on Intelligent Equipment and Special Robots (ICIESR 2025), Qingdao, China
+    year: 2025
+
+  - title: Designing efficient liquid-cooled heat sinks using electrochemical AM and functionality-driven topology optimization and lattices
+    authors: J.N. Orakwe, A. Inoma, O. Ibhadode, E. Toyserkani
+    venue: Holistic Innovation in Additive Manufacturing (HI-AM 2025), Waterloo, Canada
+    year: 2025
+
+  - title: An integrated computational framework for strut, plate and TPMS-type lattice design
+    authors: A.O. Inoma, C. Ifediorah, O. Ibhadode
+    venue: HI-AM 2025, Waterloo, Canada
+    note: 2nd Place, Best Abstract Award
+    year: 2025
+
+  - title: Thermo-hydraulic performance of additively manufactured uniform and hybrid triply periodic minimal surfaces (TPMS) geometries
+    authors: A. Hassanirad, O. Ibhadode, C.C. Kwasi-Effah
+    venue: HI-AM 2025, Waterloo, Canada
+    year: 2025
+    doi: 10.15353/hi-am.v1i1.6777
+
+  - title: "Optiworks: A multifunctional high-resolution topology optimization software"
+    authors: C. Ifediorah, A. Inoma, O. Ibhadode
+    venue: HI-AM 2025, Waterloo, Canada
+    year: 2025
+
+  - title: Designing efficient liquid-cooled heat sinks using electrochemical AM and functionality-driven topology optimization and lattices
+    authors: J.N. Orakwe, A. Inoma, O. Ibhadode, E. Toyserkani
+    venue: IEEE ITherm 2025, Dallas, USA
+    year: 2025
+
+  - title: Hydraulic performance of novel triply periodic minimal surface (TPMS) structures for heat transfer applications
+    authors: C. Kwasi-Effah, O. Ibhadode
+    venue: CSME/CFD Conference, University of Toronto, Canada
+    year: 2024
+
+  - title: Large scale computing in topology optimization for graded porous structures
+    authors: C. Ifediorah, O. Ibhadode
+    venue: CSME/CFD Conference, University of Toronto, Canada
+    year: 2024
+
+  - title: A novel inosculation-inspired BCC-based lattice structure for improved compressive mechanical properties
+    authors: A. Inoma, E. Ige, O. Ibhadode
+    venue: CSME/CFD Conference, University of Toronto, Canada
+    year: 2024
+
+  - title: Power electronics cooling solution for the automotive sector enabled via design for additive manufacturing
+    authors: O. Ibhadode, S. Winkler, M. Vlasea
+    venue: RAPID + TCT, Chicago, USA
+    year: 2023
+
+  - title: Topological fidelity of additively manufactured AlSi10Mg gyroid structures
+    authors: O. Ibhadode, I. Rishmawi, M. Kirby, M. Vlasea, S. Winkler
+    venue: NSERC Holistic Innovation in Additive Manufacturing, Halifax, Canada
+    year: 2023
+
+  - title: "Design for additive manufacturing: redesign, performance, and manufacturability analysis of a single non-compressible fluid-flow heat exchanger"
+    authors: J. Orakwe, O. Ibhadode, A. Bonakdar, E. Toyserkani
+    venue: NSERC Holistic Innovation in Additive Manufacturing, Halifax, Canada
+    year: 2023
+
+  - title: Designing topology optimized graded porous structures considering additive manufacturing constraints
+    authors: O. Ibhadode, E. Toyserkani
+    venue: NSERC Holistic Innovation in Additive Manufacturing, Montréal, Canada
+    year: 2022
+
+books:
+  - title: Metal Additive Manufacturing
+    authors: E. Toyserkani, D. Sarker, O. Ibhadode, F. Liravi, P. Russo, K. Taherkhani
+    venue: John Wiley & Sons, Hoboken, NJ
+    details: 1st ed., 624 pp., ISBN 978-1-119-21078-8
+    year: 2021
+    url: https://books.google.ca/books?id=mSRLEAAAQBAJ
+
+chapters:
+  - title: "Structural design strategies for the production of internal combustion engine components by additive manufacturing: a case study of a connecting rod"
+    authors: O. Ibhadode
+    venue: "In: Renewable Energy — Recent Advances, IntechOpen"
+    year: 2023
+    url: https://www.intechopen.com/online-first/86387
+
+patents:
+  - title: Computer-implemented topology optimization model for components under design-dependent loads
+    authors: O. Ibhadode, E. Toyserkani, A. Bonakdar
+    venue: WO2022122229 — filed by Siemens Energy, 23 July 2020
+    year: 2020
+    url: https://patentscope.wipo.int/search/en/detail.jsf?docId=WO2022122229
+
+  - title: Computer-implemented method of reducing support structures in topology optimized design for additive manufacturing
+    authors: O. Ibhadode, E. Toyserkani, A. Bonakdar
+    venue: WO2022128361 — filed by Siemens Energy, 1 October 2020
+    year: 2020
+    url: https://patentscope.wipo.int/search/en/detail.jsf?docId=WO2022128361

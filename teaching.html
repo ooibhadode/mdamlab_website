@@ -1,0 +1,55 @@
+---
+title: Teaching
+permalink: /teaching/
+heading: Teaching
+lede: >-
+  Courses taught by Dr. Osezua Ibhadode in the Department of Mechanical
+  Engineering at the University of Alberta.
+---
+{% assign t = site.data.teaching %}
+
+{% if t.current.size > 0 %}
+<section class="group">
+  <h2>This term</h2>
+  {% for c in t.current %}
+  <div class="course">
+    <span class="code">{{ c.code }}</span>
+    <div>
+      <h3>{% if c.url %}<a href="{{ c.url }}">{{ c.title }}</a>{% else %}{{ c.title }}{% endif %}</h3>
+      <p>{{ c.terms }}</p>
+      {% if c.description %}<p class="desc">{{ c.description }}</p>{% endif %}
+    </div>
+  </div>
+  {% endfor %}
+</section>
+{% endif %}
+
+{% if t.upcoming.size > 0 %}
+<section class="group">
+  <h2>Upcoming</h2>
+  {% for c in t.upcoming %}
+  <div class="course">
+    <span class="code">{{ c.code }}</span>
+    <div>
+      <h3>{% if c.url %}<a href="{{ c.url }}">{{ c.title }}</a>{% else %}{{ c.title }}{% endif %}</h3>
+      <p>{{ c.terms }}</p>
+    </div>
+  </div>
+  {% endfor %}
+</section>
+{% endif %}
+
+<section class="group">
+  <h2>Previously taught</h2>
+  {% for c in t.previous %}
+  <div class="course">
+    <span class="code">{{ c.code }}</span>
+    <div>
+      <h3>{% if c.url %}<a href="{{ c.url }}">{{ c.title }}</a>{% else %}{{ c.title }}{% endif %}</h3>
+      <p>{{ c.terms }}</p>
+    </div>
+  </div>
+  {% endfor %}
+</section>
+
+<p class="muted">Course materials are shared with enrolled students through eClass.</p>

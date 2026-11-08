@@ -1,0 +1,59 @@
+---
+title: Team
+permalink: /team/
+heading: The team
+lede: >-
+  Postdocs, graduate students and undergraduate researchers working on design
+  for additive manufacturing in the Department of Mechanical Engineering.
+---
+{% assign people = site.data.team.people %}
+
+{% for g in site.data.team.groups %}
+  {% assign members = people | where: 'group', g.id %}
+  {% if members.size == 0 %}{% continue %}{% endif %}
+
+  <section class="group" id="{{ g.id }}">
+    <h2>{{ g.title }}</h2>
+
+    {% if g.id == 'pi' %}
+      {% for p in members %}
+      <div class="pi">
+        <img src="{{ '/assets/images/people/' | append: p.photo | relative_url }}" alt="{{ p.name }}" width="480" height="552">
+        <div>
+          <h3>{{ p.name }}<span class="cred">, {{ p.credentials }}</span></h3>
+          <p class="role">{{ p.role }}</p>
+          {% include person-links.html p=p %}
+          {% if p.bio %}<div class="bio">{{ p.bio | markdownify }}</div>{% endif %}
+        </div>
+      </div>
+      {% endfor %}
+
+    {% elsif g.id == 'alumni' %}
+      {% for ag in site.data.team.alumni_groups %}
+        {% assign former = members | where: 'former', ag.id %}
+        {% if former.size == 0 %}{% continue %}{% endif %}
+        <div class="alumni-group">
+          <h3>{{ ag.title }}</h3>
+          <ul class="alumni">
+            {% for p in former %}
+            {% assign parts = p.name | split: ' ' %}
+            <li>
+              {% if p.photo %}<img src="{{ '/assets/images/people/' | append: p.photo | relative_url }}" alt="" width="56" height="56" loading="lazy">{% else %}<div class="initials" aria-hidden="true">{{ parts.first | slice: 0 }}{{ parts.last | slice: 0 }}</div>{% endif %}
+              <div>
+                <strong>{{ p.name }}{% if p.credentials %}<span class="cred">, {{ p.credentials }}</span>{% endif %}</strong>
+                <span>{{ p.role }}{% if p.years %} · {{ p.years }}{% endif %}</span>
+                {% include person-links.html p=p %}
+              </div>
+            </li>
+            {% endfor %}
+          </ul>
+        </div>
+      {% endfor %}
+
+    {% else %}
+      <div class="people">
+        {% for p in members %}{% include person.html p=p %}{% endfor %}
+      </div>
+    {% endif %}
+  </section>
+{% endfor %}

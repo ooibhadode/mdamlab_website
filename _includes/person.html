@@ -1,0 +1,13 @@
+{%- assign p = include.p -%}
+{%- assign parts = p.name | split: ' ' -%}
+<article class="person">
+  {% if p.photo %}
+    <img src="{{ '/assets/images/people/' | append: p.photo | relative_url }}" alt="{{ p.name }}" width="480" height="552" loading="lazy">
+  {% else %}
+    <div class="initials" aria-hidden="true">{{ parts.first | slice: 0 }}{{ parts.last | slice: 0 }}</div>
+  {% endif %}
+  <h3>{{ p.name }}{% if p.credentials %}<span class="cred">, {{ p.credentials }}</span>{% endif %}</h3>
+  <p class="role">{{ p.role }}</p>
+  {% if p.focus %}<p class="focus">{{ p.focus }}</p>{% endif %}
+  {% include person-links.html p=p %}
+</article>

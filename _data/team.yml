@@ -1,0 +1,249 @@
+# ---------------------------------------------------------------
+#  TEAM
+#  - group: pi | postdoc | visiting | associate | phd | msc | undergrad | alumni
+#  - photo: file name inside assets/images/people/ (leave out to show initials).
+#    Use a portrait JPG about 480 x 552 px.
+#  - When someone leaves: set `group: alumni`, set `former:` to the group they
+#    were in (postdoc, visiting, associate, phd, msc, undergrad, intern)
+#    and add `years:`, e.g. "2023–2025".
+# ---------------------------------------------------------------
+
+people:
+  # ===== Current members =====
+  - name: Osezua Ibhadode
+    credentials: PhD, PEng
+    group: pi
+    role: Assistant Professor, Mechanical Engineering
+    photo: ibhadode.jpg
+    email: mdamlab@ualberta.ca
+    linkedin: https://www.linkedin.com/in/osezua-ibhadode-89663030/
+    scholar: https://scholar.google.com/citations?user=sgSQSDgAAAAJ&hl=en
+    # TODO: expand this bio (education, previous positions, awards)
+    bio: |
+      Dr. Osezua Ibhadode is an Assistant Professor in the Department of
+      Mechanical Engineering at the University of Alberta and a registered
+      Professional Engineer. His research sits where computational design meets
+      additive manufacturing: topology optimization, lattice and porous
+      structures, process-aware design and AI-assisted design.
+
+      He is a co-author of the textbook *Metal Additive Manufacturing*
+      (Wiley, 2021), a co-inventor on two patent applications on topology
+      optimization for additive manufacturing, and the developer of several
+      open-source design tools. He teaches finite element methods,
+      manufacturing processes, and design for additive manufacturing.
+
+  - name: Oluwafemi Ezekiel Ige
+    credentials: PhD
+    group: postdoc
+    role: Postdoctoral Fellow
+    focus: Mechanical characterization of porous structures
+    photo: ige.jpg
+    linkedin: https://www.linkedin.com/in/oluwafemi-ezekiel-ige-phd-b8658028/
+    scholar: https://scholar.google.com/citations?user=yqEOAUIAAAAJ&hl=en
+
+  - name: Muhammad Irfan
+    group: phd
+    role: PhD Student
+    focus: Process modeling and optimization for bi-metallic wire arc additive manufacturing
+    photo: irfan.jpg
+    linkedin: https://www.linkedin.com/in/muhammad-irfan-219273185/
+    scholar: https://scholar.google.ca/citations?user=pIBWi6wAAAAJ&hl=en
+
+  - name: Esosa Victoria Egharevba
+    group: msc
+    role: MSc Student
+    focus: Stress- and mass-based topology optimization for additive manufacturing
+    photo: egharevba.jpg
+    linkedin: https://www.linkedin.com/in/esosa-egharevba-2042981b3/
+
+  - name: Mohammadhossein Fahmideh
+    group: msc
+    role: MSc Student
+    focus: Multi-material topology optimization considering LPBF process distortion control
+    photo: fahmideh.jpg
+    linkedin: https://www.linkedin.com/in/mohammadhossein-fahmideh-827256442/
+
+  - name: Xinhao Yin
+    group: msc
+    role: MSc Student
+    focus: Multiscale design of additively manufactured heat exchangers for electronics cooling
+    photo: yin.jpg
+    linkedin: https://www.linkedin.com/in/xinhao-yin-415528267
+
+  - name: Suhayb Karim
+    group: undergrad
+    role: Undergraduate Research Assistant
+    photo: karim.jpg
+    linkedin: https://www.linkedin.com/in/suhayb-karim-110942308/
+
+  - name: Ebele Chisom Nwizu
+    group: undergrad
+    role: Undergraduate Research Assistant
+    photo: nwizu.jpg
+    linkedin: https://www.linkedin.com/in/ebele-nwizu
+
+  # ===== Alumni =====
+  - name: Joseph Nonso Orakwe
+    credentials: PhD
+    group: alumni
+    former: postdoc
+    role: Postdoctoral Fellow
+    years: May–October 2026
+    photo: orakwe.jpg
+    linkedin: https://www.linkedin.com/in/joseph-nonso-orakwe-637492110/
+    scholar: https://scholar.google.com/citations?user=8X7PFZ4AAAAJ&hl=en
+
+  - name: Roberto Monroy
+    credentials: PhD
+    group: alumni
+    former: postdoc
+    role: Postdoctoral Fellow
+    years: 2024–2026
+    photo: monroy.jpg
+    linkedin: https://www.linkedin.com/in/robmonroy/
+    scholar: https://scholar.google.ca/citations?user=l4A8xqIAAAAJ&hl=en
+
+  - name: Yun-Fei Fu
+    credentials: PhD
+    group: alumni
+    former: postdoc
+    role: Postdoctoral Fellow
+    years: 2023–2025
+    photo: fu.jpg
+    linkedin: https://www.linkedin.com/in/yun-fei-fu-38285a190/
+    scholar: https://scholar.google.com/citations?user=K131VtsAAAAJ&hl=en
+
+  - name: Collins Chike Kwasi-Effah
+    credentials: PhD
+    group: alumni
+    former: visiting
+    role: Visiting Researcher
+    years: 2024–2025
+    photo: kwasi-effah.jpg
+    linkedin: https://www.linkedin.com/in/collins-kwasi-effah-43708328a/
+    scholar: https://scholar.google.com/citations?user=lbY5caEAAAAJ&hl=en
+
+  - name: Heba Farag
+    credentials: PhD
+    group: alumni
+    former: associate
+    role: Research Associate
+    years: 2024–2025
+    photo: farag.jpg
+    linkedin: https://www.linkedin.com/in/hebafarag/
+    website: https://www.researchgate.net/profile/Heba-Farag-4
+
+  - name: Armin Hassanirad
+    group: alumni
+    former: msc
+    role: MSc
+    years: Graduated 2026
+    photo: hassanirad.jpg
+    linkedin: https://www.linkedin.com/in/armin-hassanirad-85015669
+    scholar: https://scholar.google.co.uk/citations?user=R0fDvssAAAAJ&hl=en
+
+  - name: Chinedu Ifediorah
+    group: alumni
+    former: msc
+    role: MSc
+    years: 2023–2025
+    photo: ifediorah.jpg
+    linkedin: https://www.linkedin.com/in/chinedu-ifediorah11/
+
+  - name: Alex Inoma
+    group: alumni
+    former: msc
+    role: MSc
+    years: 2023–2025
+    photo: inoma.jpg
+    linkedin: https://www.linkedin.com/in/alex-inoma/
+
+  - name: Hilda Chris-Amadin
+    group: alumni
+    former: undergrad
+    role: Undergraduate Research Assistant
+    years: 2023–2026
+    photo: chris-amadin.jpg
+
+  - name: Bobby Zhao
+    group: alumni
+    former: undergrad
+    role: Undergraduate Research Assistant
+    years: Spring/Summer 2024
+    photo: zhao.jpg
+    linkedin: https://www.linkedin.com/in/bobby-zhao
+
+  - name: Savith Srinivas
+    group: alumni
+    former: undergrad
+    role: Undergraduate Research Assistant
+    years: Spring/Summer 2024
+    photo: srinivas.jpg
+    linkedin: https://www.linkedin.com/in/savith-srinivas-b031461b2
+
+  - name: Vedant Deshmukh
+    group: alumni
+    former: undergrad
+    role: Undergraduate Research Assistant
+    years: Spring/Summer 2024
+    # TODO: the old site linked to the wrong LinkedIn profile — add the correct one
+
+  - name: Dash Campbell
+    group: alumni
+    former: undergrad
+    role: Undergraduate Research Assistant
+    years: Spring/Summer 2024
+    photo: campbell.jpg
+    linkedin: https://www.linkedin.com/in/dash-campbell-636aa62a9/
+
+  - name: Isaiah Abreha
+    group: alumni
+    former: intern
+    role: High-School Intern
+    years: Spring/Summer 2026
+    linkedin: https://www.linkedin.com/in/isaiah-abreha-0a524641a/
+
+# Sections on the Team page, in display order.
+# `label` is the short title shown under photos on the home page.
+groups:
+  - id: pi
+    title: Principal Investigator
+    label: Principal Investigator
+  - id: postdoc
+    title: Postdoctoral Fellows
+    label: Postdoctoral Fellow
+  - id: visiting
+    title: Visiting Researchers
+    label: Visiting Researcher
+  - id: associate
+    title: Research Associates
+    label: Research Associate
+  - id: phd
+    title: PhD Students
+    label: PhD Student
+  - id: msc
+    title: MSc Students
+    label: MSc Student
+  - id: undergrad
+    title: Undergraduate Researchers
+    label: Undergraduate Researcher
+  - id: alumni
+    title: Alumni
+    label: Alumni
+
+# Sub-headings for the Alumni section, in display order.
+alumni_groups:
+  - id: postdoc
+    title: Postdoctoral Fellows
+  - id: visiting
+    title: Visiting Researchers
+  - id: associate
+    title: Research Associates
+  - id: phd
+    title: PhD
+  - id: msc
+    title: MSc
+  - id: undergrad
+    title: Undergraduate Researchers
+  - id: intern
+    title: Interns

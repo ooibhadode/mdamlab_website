@@ -1,0 +1,196 @@
+---
+title: Research
+permalink: /research/
+heading: What we work on
+lede: >-
+  We build computational design tools for additive manufacturing (AM) and test
+  them on real parts. Our work moves between method development, simulation and
+  printing — and much of it is released as open-source software.
+---
+{% assign img = '/assets/images/research/' | relative_url %}
+
+<div class="with-toc">
+  <aside class="toc" aria-label="On this page">
+    <ol>
+      <li><a href="#topology-optimization">Topology optimization</a></li>
+      <li><a href="#lattices">Lattice &amp; porous structures</a></li>
+      <li><a href="#thermal">Thermal–fluid design</a></li>
+      <li><a href="#process">Process modelling &amp; constraints</a></li>
+      <li><a href="#ai">AI-assisted design</a></li>
+      <li><a href="#software">Open software</a></li>
+    </ol>
+  </aside>
+
+  <div>
+    <section class="topic" id="topology-optimization">
+      <span class="num">01</span>
+      <h2>Topology optimization</h2>
+      <p>
+        Topology optimization finds the best distribution of material in a design space for a given
+        objective and set of constraints. We develop new multiphysics and multi-objective formulations —
+        and build on established ones — so that the optimized designs are both high-performing and
+        printable. Applications range from aerospace and automotive brackets to heat exchangers and
+        orthopaedic implants.
+      </p>
+      <ul class="keywords"><li>Multiphysics</li><li>Design-dependent loads</li><li>Graded porous infill</li><li>Large-scale / parallel computing</li></ul>
+      <div class="figs">
+        <figure>
+          <img src="{{ img }}implant.jpg" alt="Convergence history and resulting designs of a topology-optimized graded porous bone implant" loading="lazy">
+          <figcaption><b>Graded porous implant.</b> Optimization history of a topology-optimized bone implant with graded porosity.</figcaption>
+        </figure>
+        <figure>
+          <img src="{{ img }}bile.jpg" alt="Arch-shaped structure obtained by topology optimization under a distributed pressure load" loading="lazy">
+          <figcaption><b>Design-dependent pressure loads.</b> Problem set-up and the arch-shaped design found with the BILE model as the pressure boundary evolves. <span class="muted">Ibhadode et al., <i>Struct. Multidisc. Optim.</i>, 2020.</span></figcaption>
+        </figure>
+        <figure>
+          <img src="{{ img }}topopt-home.jpg" alt="Topology-optimized brackets with lattice infill" loading="lazy">
+          <figcaption><b>Brackets for AM.</b> Topology-optimized bracket designs.</figcaption>
+        </figure>
+        <figure>
+          <img src="{{ img }}implant-to-review.jpg" alt="Topology optimization applied to pelvic and femoral implants with different strategies" loading="lazy">
+          <figcaption><b>Implants.</b> Multi-objective, stress-based and infill strategies for orthopaedic implants. <span class="muted">Davoodi et al., <i>Bioactive Materials</i>, 2022.</span></figcaption>
+        </figure>
+      </div>
+    </section>
+
+    <section class="topic" id="lattices">
+      <span class="num">02</span>
+      <h2>Lattice &amp; porous structures</h2>
+      <p>
+        AM makes it possible to build lattice, porous and infill structures that were once impractical
+        to produce. They offer excellent strength-to-weight ratios for load-bearing parts, and very large
+        surface areas — especially triply periodic minimal surfaces (TPMS) — for heat transfer. We design
+        lattices from periodic or random unit cells, invent new cell types, and couple them with
+        topology optimization through infill-based approaches. Uses include lightweighting,
+        metamaterials, bone scaffolds and impact absorbers.
+      </p>
+      <ul class="keywords"><li>Strut, plate &amp; TPMS lattices</li><li>Implicit modelling</li><li>Functional grading</li><li>Mechanical characterization</li></ul>
+      <div class="figs">
+        <figure>
+          <img src="{{ img }}dcc-inosculation.jpg" alt="Inosculated tree trunks and the dual curved cubic lattice cell they inspired" loading="lazy">
+          <figcaption><b>Nature-inspired cells.</b> The dual curved cubic (DCC) lattice takes its cue from inosculation — where tree branches grow into one another — and outperforms BCC and Octet cells in compression. <span class="muted">Inoma &amp; Ibhadode, <i>Int. J. Mech. Sci.</i>, 2025.</span></figcaption>
+        </figure>
+        <figure>
+          <img src="{{ img }}gyroid-printed.jpg" alt="A set of laser powder bed fusion printed AlSi10Mg gyroid lattice samples" loading="lazy">
+          <figcaption><b>From model to metal.</b> AlSi10Mg gyroid samples printed by laser powder bed fusion to study how faithfully thin lattices are reproduced. <span class="muted">Ibhadode et al., <i>J. Manuf. Processes</i>, 2023.</span></figcaption>
+        </figure>
+        <figure>
+          <img src="{{ img }}tpms-morphologies.jpg" alt="Uniform, functionally graded and bimorphology TPMS lattice structures" loading="lazy">
+          <figcaption><b>Architected TPMS.</b> Uniform, functionally graded and bi-morphology TPMS structures. <span class="muted">Hassanirad et al., <i>Int. J. Heat Mass Transfer</i>, 2026.</span></figcaption>
+        </figure>
+        <figure>
+          <img src="{{ img }}tpms-stretched.jpg" alt="TPMS unit cells stretched along different directions" loading="lazy">
+          <figcaption><b>Cell stretching.</b> Stretched TPMS cells used to tune thermal and flow behaviour. <span class="muted">Ibhadode, <i>Int. Commun. Heat Mass Transfer</i>, 2024.</span></figcaption>
+        </figure>
+      </div>
+    </section>
+
+    <section class="topic" id="thermal">
+      <span class="num">03</span>
+      <h2>Thermal–fluid design</h2>
+      <p>
+        Many of our problems are multifunctional: a part has to carry load <em>and</em> move heat.
+        We design liquid-cooled heat sinks and heat exchangers for electronics and energy systems by
+        combining thermal-fluid topology optimization with conformal minimal-surface lattices, and we
+        test the designs through simulation and printed prototypes — including through industry
+        collaborations and the ITherm student cold-plate challenge.
+      </p>
+      <ul class="keywords"><li>Heat sinks &amp; cold plates</li><li>TPMS heat exchangers</li><li>CFD</li><li>Electrochemical AM</li></ul>
+      <div class="figs">
+        <figure>
+          <img src="{{ img }}copper-heatsink-printed.jpg" alt="A copper additively manufactured liquid-cooled heat sink with curved internal fins" loading="lazy">
+          <figcaption><b>Printed heat sink.</b> A copper liquid-cooled heat sink with topology-optimized internal channels, made by additive manufacturing.</figcaption>
+        </figure>
+        <figure>
+          <img src="{{ img }}tpms-heatsink-setup.jpg" alt="Computational set-up of a TPMS heat sink with water inlet, outlet and heat source" loading="lazy">
+          <figcaption><b>TPMS heat sinks.</b> Simulation set-up for new G-Prime and FRD minimal-surface geometries. <span class="muted">Kwasi-Effah et al., <i>Int. Commun. Heat Mass Transfer</i>, 2024.</span></figcaption>
+        </figure>
+        <figure>
+          <img src="{{ img }}heatsink.jpg" alt="Multiscale heat sink combining topology optimization and minimal surfaces, with flow velocity field" loading="lazy">
+          <figcaption><b>Multiscale design.</b> A heat sink combining topology-optimized channels with minimal-surface infill.</figcaption>
+        </figure>
+        <figure>
+          <img src="{{ img }}heatsink-variants.jpg" alt="Four heat sink designs compared: conventional serpentine, serpentine-lattice, and two hybrid topology-optimized lattice variants" loading="lazy">
+          <figcaption><b>Design variants.</b> From a conventional serpentine channel to hybrid topology-optimized, lattice-filled designs with up to 5.7&times; more heat-transfer surface. <span class="muted">Orakwe et al., <i>Additive Manufacturing</i>, 2025.</span></figcaption>
+        </figure>
+      </div>
+    </section>
+
+    <section class="topic" id="process">
+      <span class="num">04</span>
+      <h2>Process modelling &amp; constraints</h2>
+      <p>
+        A design is only useful if it can be made. We model the printing process to predict how a part
+        deforms and what residual stresses build up during and after printing, and we develop fast
+        small- and large-scale process models — such as inherent-strain methods — that can run inside
+        an optimization loop. Capturing the process in the design method lets us avoid severe defects
+        before anything is printed, for laser powder bed fusion and wire-arc AM alike.
+      </p>
+      <ul class="keywords"><li>Residual stress &amp; distortion</li><li>Inherent strain method</li><li>Support structure design</li><li>Wire-arc AM</li></ul>
+      <div class="figs">
+        <figure>
+          <img src="{{ img }}process.gif" alt="Animation of predicted deformation of a plate during printing" loading="lazy">
+          <figcaption><b>Predicting distortion.</b> Simulated build-up of deformation in a printed part.</figcaption>
+        </figure>
+        <figure>
+          <img src="{{ img }}inherent-strain.jpg" alt="Layer-by-layer activation scheme of the inherent strain method on a substrate" loading="lazy">
+          <figcaption><b>Fast process models.</b> A high-resolution inherent strain method that uses the actual layer thickness. <span class="muted">Zhang et al., <i>J. Mater. Res. Technol.</i>, 2024.</span></figcaption>
+        </figure>
+        <figure>
+          <img src="{{ img }}supports-printed.jpg" alt="Inconel 718 arch-bridge parts printed by laser powder bed fusion with four different support structures, on the build plate and after cutting" loading="lazy">
+          <figcaption><b>Smarter supports.</b> Inconel 718 parts printed with four support strategies, including our residual-stress-constrained, topology-optimized supports (GraAndISM), shown on the build plate and after cutting. <span class="muted">Zhang et al., <i>J. Manuf. Processes</i>, 2026.</span></figcaption>
+        </figure>
+        <figure>
+          <img src="{{ img }}waam-cell.jpg" alt="Robotic wire-arc additive manufacturing cell with wire feeder, power supply and torch" loading="lazy">
+          <figcaption><b>Wire-arc AM.</b> The robotic WAAM cell used to study bead geometry. <span class="muted">Irfan et al., <i>J. Adv. Joining Processes</i>, 2025.</span></figcaption>
+        </figure>
+      </div>
+    </section>
+
+    <section class="topic" id="ai">
+      <span class="num">05</span>
+      <h2>AI-assisted design &amp; process optimization</h2>
+      <p>
+        Convolutional neural networks and generative adversarial networks have been used to speed up
+        topology optimization, and there is still a lot of room to improve. We are developing
+        data-driven surrogate models that learn from process data — for example, predicting hot and cold
+        spots from photodiode or optical tomography signals — and feed those predictions back into
+        topology optimization. The same tools help us choose process parameters, as in our work on
+        wire-arc AM.
+      </p>
+      <ul class="keywords"><li>Surrogate models</li><li>Deep learning for topology optimization</li><li>In-situ monitoring data</li><li>Parameter optimization</li></ul>
+      <div class="figs">
+        <figure>
+          <img src="{{ img }}waam-ann.jpg" alt="Neural network mapping wire feed speed, torch travel speed and gas flow rate to an objective" loading="lazy">
+          <figcaption><b>Learning the process.</b> A neural network maps wire feed speed, torch travel speed and gas flow rate to bead quality. <span class="muted">Irfan et al., <i>J. Adv. Joining Processes</i>, 2025.</span></figcaption>
+        </figure>
+        <figure>
+          <img src="{{ img }}ai-home.jpg" alt="Response surface of bead-geometry variation against torch travel speed and wire feed rate" loading="lazy">
+          <figcaption><b>Response surfaces.</b> Variation in bead geometry across torch travel speed and wire feed rate.</figcaption>
+        </figure>
+      </div>
+    </section>
+
+    <section class="topic" id="software">
+      <span class="num">06</span>
+      <h2>Open software</h2>
+      <p>
+        A core aim of the lab is to put new design techniques in the hands of researchers, teachers,
+        engineers and designers. We release our tools — mostly open source — for topology optimization,
+        fast AM process modelling, implicit lattice modelling and design decision-making, and we use
+        the feedback to improve them.
+      </p>
+      <div class="figs">
+        <figure>
+          <img src="{{ '/assets/images/software/freeto.jpg' | relative_url }}" alt="A hand-shaped freeform part produced by FreeTO" loading="lazy">
+          <figcaption><b>FreeTO.</b> Freeform 3D topology optimization on a structured mesh with smooth boundaries.</figcaption>
+        </figure>
+        <figure>
+          <img src="{{ img }}lattgen-ui.jpg" alt="LattGen user interface generating a TPMS lattice cube" loading="lazy">
+          <figcaption><b>LattGen.</b> Generating graded TPMS lattices. <span class="muted">Chris-Amadin &amp; Ibhadode, <i>Software Impacts</i>, 2024.</span></figcaption>
+        </figure>
+      </div>
+      <p style="margin-top:1.6rem"><a class="more" href="{{ '/software/' | relative_url }}">Browse all software and code</a></p>
+    </section>
+  </div>
+</div>

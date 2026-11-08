@@ -1,0 +1,21 @@
+# Main menu. Order here = order in the header.
+# Set external: true for links that leave the site (opens in a new tab).
+- title: Research
+  url: /research/
+- title: Team
+  url: /team/
+- title: Publications
+  url: /publications/
+- title: Software
+  url: /software/
+- title: News
+  url: /news/
+- title: Teaching
+  url: /teaching/
+- title: Partnerships
+  url: /partnerships/
+- title: Join Us
+  url: /join-us/
+- title: Employees
+  url: https://sites.google.com/ualberta.ca/mdamlabintranet/home
+  external: true

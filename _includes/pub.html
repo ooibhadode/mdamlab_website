@@ -1,0 +1,7 @@
+{%- assign p = include.p -%}
+{%- if p.doi -%}{%- capture link -%}https://doi.org/{{ p.doi }}{%- endcapture -%}{%- elsif p.url -%}{%- assign link = p.url -%}{%- else -%}{%- assign link = nil -%}{%- endif -%}
+<li class="pub">
+  <p class="t">{% if link %}<a href="{{ link }}">{{ p.title }}</a>{% else %}{{ p.title }}{% endif %}</p>
+  <p class="a">{{ p.authors }}</p>
+  <p class="v"><em>{{ p.venue }}</em>{% if p.details %}, {{ p.details }}{% endif %}{% if include.show_year %} ({{ p.year }}){% endif %}{% if p.note %} <span class="award">{{ p.note }}</span>{% endif %}</p>
+</li>

@@ -1,0 +1,60 @@
+# ---------------------------------------------------------------
+#  MDAM Lab website — site-wide settings
+#  After editing this file, the site rebuilds automatically on push.
+# ---------------------------------------------------------------
+
+title: MDAM Lab
+long_title: Multifunctional Design & Additive Manufacturing Lab
+description: >-
+  The Multifunctional Design and Additive Manufacturing (MDAM) Lab at the
+  University of Alberta develops topology optimization, lattice design and
+  process-aware design tools for additive manufacturing.
+url: "https://mdamlab.ca"
+baseurl: ""
+lang: en-CA
+
+email: mdamlab@ualberta.ca
+department: Department of Mechanical Engineering
+university: University of Alberta
+university_url: https://www.ualberta.ca/
+address:
+  - 10-352 Donadeo Innovation Centre for Engineering
+  - 116 St NW
+  - Edmonton, AB T6G 2E1
+map_url: "https://www.google.com/maps/place/Donadeo+Innovation+Centre+for+Engineering/@53.5282209,-113.5318669,17z"
+
+# Shown on the home page and in search results
+logo: /assets/images/brand/mdam-logo.png
+
+# News posts live in _posts/ and are served at /news/YYYY/post-name/
+permalink: /news/:year/:title/
+
+timezone: America/Edmonton
+markdown: kramdown
+kramdown:
+  input: GFM
+  auto_ids: true
+
+plugins:
+  - jekyll-seo-tag
+  - jekyll-sitemap
+  - jekyll-feed
+
+feed:
+  path: news/feed.xml
+
+defaults:
+  - scope: { path: "", type: posts }
+    values: { layout: post }
+  - scope: { path: "" }
+    values: { layout: page }
+
+exclude:
+  - README.md
+  - CONTENT-GUIDE.md
+  - Gemfile
+  - Gemfile.lock
+  - vendor
+  - .github
+  - "*.xlsx"
+  - "*.csv"

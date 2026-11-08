@@ -1,0 +1,25 @@
+---
+layout: default
+---
+<header class="page-head">
+  <div class="wrap narrow">
+    <p class="post-date"><time datetime="{{ page.date | date_to_xmlschema }}">{{ page.date | date: '%B %Y' }}</time></p>
+    <h1>{{ page.title }}</h1>
+  </div>
+</header>
+<div class="page-body">
+  <article class="wrap narrow post-body">
+    {% if page.image %}
+      <figure>
+        <img src="{{ page.image | relative_url }}" alt="{{ page.image_alt }}">
+        {% if page.image_alt %}<figcaption>{{ page.image_alt }}</figcaption>{% endif %}
+      </figure>
+    {% endif %}
+    {{ content }}
+
+    <nav class="post-nav" aria-label="More news">
+      <span>{% if page.previous %}<a href="{{ page.previous.url | relative_url }}">← {{ page.previous.title }}</a>{% endif %}</span>
+      <span style="text-align:right">{% if page.next %}<a href="{{ page.next.url | relative_url }}">{{ page.next.title }} →</a>{% endif %}</span>
+    </nav>
+  </article>
+</div>

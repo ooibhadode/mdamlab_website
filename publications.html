@@ -1,0 +1,59 @@
+---
+title: Publications
+permalink: /publications/
+heading: Publications
+lede: >-
+  Journal articles, conference papers, books and patents from the lab and its
+  members. For citation counts, see Google Scholar.
+---
+{% assign pubs = site.data.publications %}
+
+<ul class="jump">
+  <li><a href="#journal">Journal articles</a></li>
+  <li><a href="#conference">Conference papers</a></li>
+  <li><a href="#books">Books &amp; chapters</a></li>
+  <li><a href="#patents">Patents</a></li>
+  <li><a href="https://scholar.google.com/citations?user=sgSQSDgAAAAJ&amp;hl=en">Google Scholar ↗</a></li>
+</ul>
+
+<section class="pub-section" id="journal">
+  <h2>Journal articles</h2>
+  {% assign years = pubs.journal | group_by: 'year' %}
+  {% for y in years %}
+  <div class="year-block">
+    <h3>{{ y.name }}</h3>
+    <ol class="pubs">{% for p in y.items %}{% include pub.html p=p %}{% endfor %}</ol>
+  </div>
+  {% endfor %}
+</section>
+
+<section class="pub-section" id="conference">
+  <h2>Conference papers &amp; presentations</h2>
+  {% assign years = pubs.conference | group_by: 'year' %}
+  {% for y in years %}
+  <div class="year-block">
+    <h3>{{ y.name }}</h3>
+    <ol class="pubs">{% for p in y.items %}{% include pub.html p=p %}{% endfor %}</ol>
+  </div>
+  {% endfor %}
+</section>
+
+<section class="pub-section" id="books">
+  <h2>Books &amp; book chapters</h2>
+  <div class="year-block">
+    <h3>Book</h3>
+    <ol class="pubs">{% for p in pubs.books %}{% include pub.html p=p show_year="yes" %}{% endfor %}</ol>
+  </div>
+  <div class="year-block">
+    <h3>Chapter</h3>
+    <ol class="pubs">{% for p in pubs.chapters %}{% include pub.html p=p show_year="yes" %}{% endfor %}</ol>
+  </div>
+</section>
+
+<section class="pub-section" id="patents">
+  <h2>Patents</h2>
+  <div class="year-block">
+    <h3>Filed</h3>
+    <ol class="pubs">{% for p in pubs.patents %}{% include pub.html p=p %}{% endfor %}</ol>
+  </div>
+</section>

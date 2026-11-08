@@ -1,0 +1,23 @@
+---
+title: News
+permalink: /news/
+heading: News
+lede: Awards, new software, seminars, graduations and other things happening in the lab.
+---
+
+{% assign by_year = site.posts | group_by_exp: 'p', "p.date | date: '%Y'" %}
+{% for y in by_year %}
+  <h2 class="year-label">{{ y.name }}</h2>
+  <ul class="post-list">
+    {% for post in y.items %}
+    <li class="post-item">
+      <time datetime="{{ post.date | date_to_xmlschema }}">{{ post.date | date: '%B' }}</time>
+      <div>
+        <h2><a href="{{ post.url | relative_url }}">{{ post.title }}</a></h2>
+        <p>{{ post.excerpt | strip_html | truncatewords: 40 }}</p>
+      </div>
+      {% if post.image %}<a href="{{ post.url | relative_url }}" tabindex="-1" aria-hidden="true"><img class="pimg" src="{{ post.image | relative_url }}" alt="" loading="lazy"></a>{% else %}<span></span>{% endif %}
+    </li>
+    {% endfor %}
+  </ul>
+{% endfor %}
