@@ -15,9 +15,9 @@ lede: >-
   <div class="course">
     <span class="code">{{ c.code }}</span>
     <div>
-      <h3>{% if c.url %}<a href="{{ c.url }}">{{ c.title }}</a>{% else %}{{ c.title }}{% endif %}</h3>
+      <h3>{% if c.url and c.url != "" %}<a href="{{ c.url }}">{{ c.title }}</a>{% else %}{{ c.title }}{% endif %}</h3>
       <p>{{ c.terms }}</p>
-      {% if c.description %}<p class="desc">{{ c.description }}</p>{% endif %}
+      {% if c.description and c.description != "" %}<p class="desc">{{ c.description }}</p>{% endif %}
     </div>
   </div>
   {% endfor %}
@@ -31,7 +31,7 @@ lede: >-
   <div class="course">
     <span class="code">{{ c.code }}</span>
     <div>
-      <h3>{% if c.url %}<a href="{{ c.url }}">{{ c.title }}</a>{% else %}{{ c.title }}{% endif %}</h3>
+      <h3>{% if c.url and c.url != "" %}<a href="{{ c.url }}">{{ c.title }}</a>{% else %}{{ c.title }}{% endif %}</h3>
       <p>{{ c.terms }}</p>
     </div>
   </div>
@@ -45,7 +45,7 @@ lede: >-
   <div class="course">
     <span class="code">{{ c.code }}</span>
     <div>
-      <h3>{% if c.url %}<a href="{{ c.url }}">{{ c.title }}</a>{% else %}{{ c.title }}{% endif %}</h3>
+      <h3>{% if c.url and c.url != "" %}<a href="{{ c.url }}">{{ c.title }}</a>{% else %}{{ c.title }}{% endif %}</h3>
       <p>{{ c.terms }}</p>
     </div>
   </div>

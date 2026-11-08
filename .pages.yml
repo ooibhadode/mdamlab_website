@@ -1,0 +1,366 @@
+# Pages CMS configuration — https://pagescms.org
+# Gives the lab a form-based editor for the website at app.pagescms.org.
+# Every save is a normal commit to this repository; GitHub Pages then rebuilds the site.
+
+settings:
+  content:
+    merge: true   # keep any keys in the data files that aren't listed below
+
+media:
+  - name: news
+    label: News images
+    input: assets/images/news
+    output: /assets/images/news
+    categories: [image]
+    rename: safe
+  - name: people
+    label: Headshots
+    input: assets/images/people
+    output: /assets/images/people
+    categories: [image]
+    rename: safe
+  - name: software
+    label: Software screenshots
+    input: assets/images/software
+    output: /assets/images/software
+    categories: [image]
+    rename: safe
+  - name: partners
+    label: Partner logos
+    input: assets/images/partners
+    output: /assets/images/partners
+    categories: [image]
+    rename: safe
+
+content:
+  # ------------------------------------------------------------------ News
+  - name: news
+    label: News
+    type: collection
+    path: _posts
+    format: yaml-frontmatter
+    filename: "{year}-{month}-{day}-{primary}.md"
+    view:
+      fields: [title, date]
+      primary: title
+      sort: [date, title]
+      default:
+        sort: date
+        order: desc
+    fields:
+      - name: title
+        label: Title
+        type: string
+        required: true
+      - name: date
+        label: Date
+        type: date
+        required: true
+        options:
+          format: yyyy-MM-dd
+      - name: image
+        label: Image
+        type: image
+        description: Optional. A landscape photo works best (about 1200 px wide).
+        options:
+          media: news
+      - name: image_alt
+        label: Image caption
+        type: string
+        description: A short description of the image, shown under it.
+      - name: body
+        label: Story
+        type: rich-text
+        description: The first paragraph is used as the summary on the home and news pages.
+        options:
+          format: markdown
+          media: news
+
+  # ------------------------------------------------------------------ Team
+  - name: team
+    label: Team
+    type: file
+    path: _data/team.yml
+    fields:
+      - name: people
+        label: People
+        description: >-
+          Order here is the order on the Team page. When someone leaves, set
+          Group to "Alumni", set "Former group" and fill in "Years".
+        type: object
+        list:
+          collapsible:
+            collapsed: true
+            summary: "{fields.name} — {fields.group}"
+        fields:
+          - name: name
+            label: Full name
+            type: string
+            required: true
+          - name: credentials
+            label: Credentials
+            type: string
+            description: e.g. PhD, PEng
+          - name: group
+            label: Group
+            type: select
+            required: true
+            options:
+              values:
+                - { name: pi, label: Principal Investigator }
+                - { name: postdoc, label: Postdoctoral Fellow }
+                - { name: visiting, label: Visiting Researcher }
+                - { name: associate, label: Research Associate }
+                - { name: phd, label: PhD Student }
+                - { name: msc, label: MSc Student }
+                - { name: undergrad, label: Undergraduate Researcher }
+                - { name: alumni, label: Alumni }
+          - name: former
+            label: Former group (alumni only)
+            type: select
+            options:
+              values:
+                - { name: postdoc, label: Postdoctoral Fellow }
+                - { name: visiting, label: Visiting Researcher }
+                - { name: associate, label: Research Associate }
+                - { name: phd, label: PhD }
+                - { name: msc, label: MSc }
+                - { name: undergrad, label: Undergraduate Researcher }
+                - { name: intern, label: Intern }
+          - name: role
+            label: Title shown under the name
+            type: string
+            description: e.g. "MSc Student" or "Undergraduate Research Assistant"
+          - name: years
+            label: Years (alumni only)
+            type: string
+            description: e.g. 2023–2025 or Spring/Summer 2024
+          - name: focus
+            label: Research focus
+            type: string
+          - name: photo
+            label: Headshot
+            type: image
+            description: Portrait photo, about 480 × 552 px. Leave empty to show initials.
+            options:
+              media: people
+          - name: email
+            label: Email
+            type: string
+          - name: linkedin
+            label: LinkedIn URL
+            type: string
+          - name: scholar
+            label: Google Scholar URL
+            type: string
+          - name: website
+            label: Other website URL
+            type: string
+          - name: bio
+            label: Biography (PI only)
+            type: text
+
+  # ------------------------------------------------------------------ Publications
+  - name: publications
+    label: Publications
+    type: file
+    path: _data/publications.yml
+    fields:
+      - name: journal
+        label: Journal articles
+        description: Add new papers at the TOP of the list.
+        type: object
+        list: &publist
+          collapsible:
+            collapsed: true
+            summary: "{fields.year} — {fields.title}"
+        fields: &pubfields
+          - name: title
+            label: Title
+            type: string
+            required: true
+          - name: authors
+            label: Authors
+            type: string
+            description: e.g. A. Inoma, O. Ibhadode
+          - name: venue
+            label: Journal / venue
+            type: string
+          - name: details
+            label: Volume, pages or article number
+            type: string
+            description: e.g. 272, 129515
+          - name: year
+            label: Year
+            type: number
+          - name: doi
+            label: DOI
+            type: string
+            description: Just the 10.xxxx/... part. Leave empty if using a URL instead.
+          - name: url
+            label: URL (if there is no DOI)
+            type: string
+          - name: note
+            label: Note
+            type: string
+            description: Optional, e.g. an award.
+      - name: conference
+        label: Conference papers & talks
+        type: object
+        list: *publist
+        fields: *pubfields
+      - name: books
+        label: Books
+        type: object
+        list: *publist
+        fields: *pubfields
+      - name: chapters
+        label: Book chapters
+        type: object
+        list: *publist
+        fields: *pubfields
+      - name: patents
+        label: Patents
+        type: object
+        list: *publist
+        fields: *pubfields
+
+  # ------------------------------------------------------------------ Software
+  - name: software
+    label: Software
+    type: file
+    path: _data/software.yml
+    list: true
+    fields:
+      - name: name
+        label: Name
+        type: string
+        required: true
+      - name: full_name
+        label: Full name
+        type: string
+      - name: summary
+        label: Summary
+        type: text
+      - name: language
+        label: Platform / language
+        type: string
+      - name: paper
+        label: Paper link
+        type: string
+        description: e.g. https://doi.org/10.xxxx/...
+      - name: images
+        label: Screenshots
+        type: image
+        options:
+          media: software
+          multiple:
+            max: 2
+      - name: links
+        label: Buttons
+        description: The first one is the main button.
+        type: object
+        list: true
+        fields:
+          - name: label
+            label: Button text
+            type: string
+          - name: url
+            label: Link
+            type: string
+
+  # ------------------------------------------------------------------ Teaching
+  - name: teaching
+    label: Teaching
+    type: file
+    path: _data/teaching.yml
+    fields:
+      - name: current
+        label: Current courses
+        type: object
+        list: &courselist
+          collapsible:
+            collapsed: true
+            summary: "{fields.code} — {fields.title}"
+        fields: &coursefields
+          - name: code
+            label: Course code
+            type: string
+          - name: title
+            label: Title
+            type: string
+          - name: terms
+            label: Terms
+            type: string
+            description: e.g. Fall 2026 or Winter 2026, Winter 2025
+          - name: url
+            label: Course link
+            type: string
+          - name: description
+            label: Description
+            type: text
+      - name: upcoming
+        label: Upcoming courses
+        type: object
+        list: *courselist
+        fields: *coursefields
+      - name: previous
+        label: Previous courses
+        type: object
+        list: *courselist
+        fields: *coursefields
+
+  # ------------------------------------------------------------------ Partners
+  - name: partners
+    label: Partners & funders
+    type: file
+    path: _data/partners.yml
+    list: true
+    fields:
+      - name: category
+        label: Category
+        type: string
+      - name: items
+        label: Organizations
+        type: object
+        list:
+          collapsible:
+            collapsed: true
+            summary: "{fields.name}"
+        fields:
+          - name: name
+            label: Name
+            type: string
+          - name: logo
+            label: Logo
+            type: image
+            options:
+              media: partners
+          - name: url
+            label: Website
+            type: string
+
+  # ------------------------------------------------------------------ Join us
+  - name: funding
+    label: Join Us — funding programs
+    type: file
+    path: _data/funding.yml
+    list: true
+    fields:
+      - name: level
+        label: Level
+        type: string
+      - name: items
+        label: Programs
+        type: object
+        list: true
+        fields:
+          - name: name
+            label: Program
+            type: string
+          - name: note
+            label: Note
+            type: string
+          - name: url
+            label: Link
+            type: string

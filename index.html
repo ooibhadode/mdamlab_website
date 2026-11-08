@@ -74,7 +74,7 @@ title: Multifunctional Design & Additive Manufacturing Lab
       <a class="more" href="{{ '/news/' | relative_url }}">All news</a>
     </div>
     <div class="news-grid">
-      {% assign lead = site.posts | where_exp: "p", "p.image" | first %}
+      {% for p in site.posts %}{% if p.image and p.image != "" %}{% assign lead = p %}{% break %}{% endif %}{% endfor %}
       <a class="news-lead" href="{{ lead.url | relative_url }}">
         <img src="{{ lead.image | relative_url }}" alt="{{ lead.image_alt }}" loading="lazy">
         <time datetime="{{ lead.date | date_to_xmlschema }}">{{ lead.date | date: '%B %Y' }}</time>
@@ -121,7 +121,7 @@ title: Multifunctional Design & Additive Manufacturing Lab
     <div class="tool-grid">
       {% for tool in site.data.software %}
       <a class="tool-card" href="{{ '/software/' | relative_url }}#{{ tool.name | slugify }}">
-        <div class="shot">{% if tool.images %}<img src="{{ '/assets/images/software/' | append: tool.images.first | relative_url }}" alt="" loading="lazy">{% endif %}</div>
+        <div class="shot">{% if tool.images.size > 0 %}<img src="{% include img-src.html f=tool.images.first dir='software' %}" alt="" loading="lazy">{% endif %}</div>
         <div>
           <strong>{{ tool.name }}</strong>
           <span>{{ tool.full_name }}</span>
@@ -143,7 +143,7 @@ title: Multifunctional Design & Additive Manufacturing Lab
       {% assign g = site.data.team.groups | where: 'id', p.group | first %}
       {% assign parts = p.name | split: ' ' %}
       <a class="face" href="{{ '/team/' | relative_url }}#{{ p.group }}">
-        {% if p.photo %}<img src="{{ '/assets/images/people/' | append: p.photo | relative_url }}" alt="" width="480" height="552" loading="lazy">{% else %}<div class="initials">{{ parts.first | slice: 0 }}{{ parts.last | slice: 0 }}</div>{% endif %}
+        {% if p.photo and p.photo != "" %}<img src="{% include img-src.html f=p.photo dir='people' %}" alt="" width="480" height="552" loading="lazy">{% else %}<div class="initials">{{ parts.first | slice: 0 }}{{ parts.last | slice: 0 }}</div>{% endif %}
         <strong>{{ p.name }}</strong>
         <span>{% if p.group == 'msc' %}{{ p.role }}{% else %}{{ g.label }}{% endif %}</span>
       </a>
@@ -157,7 +157,7 @@ title: Multifunctional Design & Additive Manufacturing Lab
     <h2>Partners &amp; funders</h2>
     <ul>
       {% for group in site.data.partners %}{% for p in group.items %}
-      <li><a href="{{ p.url }}" title="{{ p.name }}"><img src="{{ '/assets/images/partners/' | append: p.logo | relative_url }}" alt="{{ p.name }}" loading="lazy"></a></li>
+      <li><a href="{{ p.url }}" title="{{ p.name }}"><img src="{% include img-src.html f=p.logo dir='partners' %}" alt="{{ p.name }}" loading="lazy"></a></li>
       {% endfor %}{% endfor %}
     </ul>
   </div>

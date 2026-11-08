@@ -14,7 +14,7 @@ lede: >-
     {% for p in group.items %}
     <li>
       <a href="{{ p.url }}">
-        <div class="lg"><img src="{{ '/assets/images/partners/' | append: p.logo | relative_url }}" alt="{{ p.name }} logo" loading="lazy"></div>
+        <div class="lg"><img src="{% include img-src.html f=p.logo dir='partners' %}" alt="{{ p.name }} logo" loading="lazy"></div>
         <span>{{ p.name }}</span>
       </a>
     </li>

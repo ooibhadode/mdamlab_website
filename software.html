@@ -18,7 +18,7 @@ lede: >-
     <div class="actions">
       {% assign main = tool.links | first %}
       <a class="btn" href="{{ main.url }}">{{ main.label }}</a>
-      {% if tool.paper %}<a class="btn ghost" href="{{ tool.paper }}">Read the paper</a>{% endif %}
+      {% if tool.paper and tool.paper != "" %}<a class="btn ghost" href="{{ tool.paper }}">Read the paper</a>{% endif %}
     </div>
     {% if tool.links.size > 1 %}
     <ul class="extra">
@@ -26,10 +26,10 @@ lede: >-
     </ul>
     {% endif %}
   </div>
-  {% if tool.images %}
+  {% if tool.images.size > 0 %}
   <div class="shots{% if tool.images.size > 1 %} two{% endif %}">
     {% for im in tool.images %}
-    <figure><img src="{{ '/assets/images/software/' | append: im | relative_url }}" alt="{{ tool.name }} screenshot {{ forloop.index }}" loading="lazy"></figure>
+    <figure><img src="{% include img-src.html f=im dir='software' %}" alt="{{ tool.name }} screenshot {{ forloop.index }}" loading="lazy"></figure>
     {% endfor %}
   </div>
   {% endif %}

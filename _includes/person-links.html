@@ -1,9 +1,10 @@
 {%- assign p = include.p -%}
-{%- if p.scholar or p.linkedin or p.website or p.email -%}
+{%- capture any_link -%}{{ p.scholar }}{{ p.linkedin }}{{ p.website }}{{ p.email }}{%- endcapture -%}
+{%- if any_link != "" -%}
 <ul class="links">
-  {% if p.email %}<li><a href="mailto:{{ p.email }}">Email</a></li>{% endif %}
-  {% if p.scholar %}<li><a href="{{ p.scholar }}">Google Scholar</a></li>{% endif %}
-  {% if p.linkedin %}<li><a href="{{ p.linkedin }}">LinkedIn</a></li>{% endif %}
-  {% if p.website %}<li><a href="{{ p.website }}">Website</a></li>{% endif %}
+  {% if p.email and p.email != "" %}<li><a href="mailto:{{ p.email }}">Email</a></li>{% endif %}
+  {% if p.scholar and p.scholar != "" %}<li><a href="{{ p.scholar }}">Google Scholar</a></li>{% endif %}
+  {% if p.linkedin and p.linkedin != "" %}<li><a href="{{ p.linkedin }}">LinkedIn</a></li>{% endif %}
+  {% if p.website and p.website != "" %}<li><a href="{{ p.website }}">Website</a></li>{% endif %}
 </ul>
 {%- endif -%}

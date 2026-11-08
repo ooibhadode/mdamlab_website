@@ -18,12 +18,12 @@ lede: >-
     {% if g.id == 'pi' %}
       {% for p in members %}
       <div class="pi">
-        <img src="{{ '/assets/images/people/' | append: p.photo | relative_url }}" alt="{{ p.name }}" width="480" height="552">
+        <img src="{% include img-src.html f=p.photo dir='people' %}" alt="{{ p.name }}" width="480" height="552">
         <div>
           <h3>{{ p.name }}<span class="cred">, {{ p.credentials }}</span></h3>
           <p class="role">{{ p.role }}</p>
           {% include person-links.html p=p %}
-          {% if p.bio %}<div class="bio">{{ p.bio | markdownify }}</div>{% endif %}
+          {% if p.bio and p.bio != "" %}<div class="bio">{{ p.bio | markdownify }}</div>{% endif %}
         </div>
       </div>
       {% endfor %}
@@ -38,10 +38,10 @@ lede: >-
             {% for p in former %}
             {% assign parts = p.name | split: ' ' %}
             <li>
-              {% if p.photo %}<img src="{{ '/assets/images/people/' | append: p.photo | relative_url }}" alt="" width="56" height="56" loading="lazy">{% else %}<div class="initials" aria-hidden="true">{{ parts.first | slice: 0 }}{{ parts.last | slice: 0 }}</div>{% endif %}
+              {% if p.photo and p.photo != "" %}<img src="{% include img-src.html f=p.photo dir='people' %}" alt="" width="56" height="56" loading="lazy">{% else %}<div class="initials" aria-hidden="true">{{ parts.first | slice: 0 }}{{ parts.last | slice: 0 }}</div>{% endif %}
               <div>
-                <strong>{{ p.name }}{% if p.credentials %}<span class="cred">, {{ p.credentials }}</span>{% endif %}</strong>
-                <span>{{ p.role }}{% if p.years %} · {{ p.years }}{% endif %}</span>
+                <strong>{{ p.name }}{% if p.credentials and p.credentials != "" %}<span class="cred">, {{ p.credentials }}</span>{% endif %}</strong>
+                <span>{{ p.role }}{% if p.years and p.years != "" %} · {{ p.years }}{% endif %}</span>
                 {% include person-links.html p=p %}
               </div>
             </li>

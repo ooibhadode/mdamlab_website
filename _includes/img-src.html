@@ -1,0 +1,1 @@
+{%- if include.f contains '/' -%}{{ include.f | relative_url }}{%- else -%}{{ '/assets/images/' | append: include.dir | append: '/' | append: include.f | relative_url }}{%- endif -%}

@@ -16,7 +16,7 @@ lede: Awards, new software, seminars, graduations and other things happening in 
         <h2><a href="{{ post.url | relative_url }}">{{ post.title }}</a></h2>
         <p>{{ post.excerpt | strip_html | truncatewords: 40 }}</p>
       </div>
-      {% if post.image %}<a href="{{ post.url | relative_url }}" tabindex="-1" aria-hidden="true"><img class="pimg" src="{{ post.image | relative_url }}" alt="" loading="lazy"></a>{% else %}<span></span>{% endif %}
+      {% if post.image and post.image != "" %}<a href="{{ post.url | relative_url }}" tabindex="-1" aria-hidden="true"><img class="pimg" src="{{ post.image | relative_url }}" alt="" loading="lazy"></a>{% else %}<span></span>{% endif %}
     </li>
     {% endfor %}
   </ul>
