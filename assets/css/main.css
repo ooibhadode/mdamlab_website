@@ -170,23 +170,44 @@ figcaption b { color: var(--ink-2); font-weight: 600; }
 
 /* ---------- Home: hero ---------- */
 .hero { padding: clamp(2.5rem, 6vw, 4.5rem) 0 clamp(2.5rem, 6vw, 4.5rem); background: linear-gradient(180deg, #fff 0%, var(--paper) 100%); border-bottom: 1px solid var(--rule); }
+.hero { position: relative; overflow: hidden; isolation: isolate; }
+/* Faded team photos behind the hero. site.js moves the .on class every 6 s; CSS does the cross-fade. */
+.hero-bg { position: absolute; inset: 0; z-index: -1; }
+.hero-bg img {
+  position: absolute; inset: 0; width: 100%; height: 100%; max-width: none;
+  object-fit: cover; object-position: center 40%;
+  opacity: 0; transform: scale(1.05);
+  transition: opacity 1.8s ease-in-out, transform 8s linear;
+}
+.hero-bg img.on { opacity: 1; transform: scale(1); }
+.hero-bg img:nth-child(4) { object-position: center 78%; }
+.hero-bg::after {
+  content: ""; position: absolute; inset: 0;
+  background:
+    linear-gradient(90deg, rgba(251,250,247,.86) 0%, rgba(251,250,247,.72) 45%, rgba(251,250,247,.62) 100%),
+    linear-gradient(180deg, rgba(255,255,255,.25) 0%, rgba(251,250,247,0) 30%, rgba(251,250,247,.45) 100%);
+}
+@media (prefers-reduced-motion: reduce) {
+  .hero-bg img, .hero-bg img.on { transform: none; transition: opacity 1.8s ease-in-out; }
+}
 .hero-grid { display: grid; grid-template-columns: 1fr 1.1fr; gap: clamp(2rem, 5vw, 4.5rem); align-items: center; }
 .hero h1 { font-size: clamp(2.1rem, 3.8vw, 3rem); letter-spacing: -0.025em; line-height: 1.08; margin-bottom: .5em; }
 .hero p.lede { font-size: 1.14rem; color: var(--ink-2); max-width: 34rem; }
 .hero .actions { display: flex; flex-wrap: wrap; gap: .7rem; margin-top: 1.7rem; }
 .hero-figure .plate {
-  position: relative; border: 1px solid var(--rule); border-radius: 6px; overflow: hidden;
-  background-color: #fff;
+  position: relative; border: 1px solid rgba(39,93,56,.18); border-radius: 6px; overflow: hidden;
+  background-color: transparent;
   background-image:
-    linear-gradient(rgba(39,93,56,.07) 1px, transparent 1px),
-    linear-gradient(90deg, rgba(39,93,56,.07) 1px, transparent 1px);
+    linear-gradient(rgba(39,93,56,.10) 1px, transparent 1px),
+    linear-gradient(90deg, rgba(39,93,56,.10) 1px, transparent 1px);
   background-size: 24px 24px;
   padding: clamp(1rem, 3vw, 2rem);
 }
 .hero-figure .plate::before, .hero-figure .plate::after { content: ""; position: absolute; width: 14px; height: 14px; border: 2px solid var(--green); }
 .hero-figure .plate::before { top: 10px; left: 10px; border-right: 0; border-bottom: 0; }
 .hero-figure .plate::after { bottom: 10px; right: 10px; border-left: 0; border-top: 0; }
-.hero-figure img { width: 100%; border: 0; background: transparent; mix-blend-mode: multiply; }
+.hero-figure figcaption, .hero-figure figcaption .muted { color: var(--ink-2); text-shadow: 0 0 8px var(--paper), 0 0 3px var(--paper); }
+.hero-figure img { width: 100%; border: 0; background: transparent; filter: drop-shadow(0 10px 18px rgba(28,36,32,.18)); }
 .stats { display: grid; grid-template-columns: repeat(4, 1fr); margin: clamp(2.5rem, 5vw, 3.5rem) 0 0; border-top: 1px solid var(--rule); }
 .stats > div { display: flex; flex-direction: column-reverse; justify-content: flex-end; padding: 1.3rem 1rem 1.5rem 1.4rem; border-right: 1px solid var(--rule); }
 .stats > div:first-child { padding-left: 0; }

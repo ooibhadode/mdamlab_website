@@ -4,6 +4,13 @@ title: Multifunctional Design & Additive Manufacturing Lab
 ---
 
 <section class="hero">
+  <!-- Team photos, faded behind the hero and cross-fading every 6 s (see site.js). Swap files in assets/images/team/. -->
+  <div class="hero-bg" aria-hidden="true">
+    <img class="on" src="{{ '/assets/images/team/team-1.jpg' | relative_url }}" alt="">
+    <img src="{{ '/assets/images/team/team-2.jpg' | relative_url }}" alt="">
+    <img src="{{ '/assets/images/team/team-3.jpg' | relative_url }}" alt="">
+    <img src="{{ '/assets/images/team/team-4.jpg' | relative_url }}" alt="">
+  </div>
   <div class="wrap hero-grid">
     <div class="hero-text">
       <h1>Designing next&#8209;generation structures for advanced manufacturing.</h1>
@@ -20,7 +27,7 @@ title: Multifunctional Design & Additive Manufacturing Lab
     </div>
     <figure class="hero-figure">
       <div class="plate">
-        <img src="{{ '/assets/images/research/copper-heatsink.jpg' | relative_url }}" alt="A copper heat sink with topology-optimized conformal lattice fins, made by electrochemical additive manufacturing" width="1280" height="883">
+        <img src="{{ '/assets/images/research/copper-heatsink.webp' | relative_url }}" alt="A copper heat sink with topology-optimized conformal lattice fins, made by electrochemical additive manufacturing" width="1280" height="883">
       </div>
       <figcaption>A heat sink designed with topology-optimization-driven conformal lattices and built by electrochemical additive manufacturing (ECAM). <span class="muted">Orakwe et al., 2024.</span></figcaption>
     </figure>

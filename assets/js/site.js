@@ -22,3 +22,15 @@
     }
   }
 })();
+
+// Home page: cross-fade the faded team photos behind the hero, one every 6 seconds.
+(function () {
+  var imgs = document.querySelectorAll('.hero-bg img');
+  if (imgs.length < 2) return;
+  var i = 0;
+  setInterval(function () {
+    imgs[i].classList.remove('on');
+    i = (i + 1) % imgs.length;
+    imgs[i].classList.add('on');
+  }, 6000);
+})();
