@@ -100,7 +100,7 @@ hr { border: 0; border-top: 1px solid var(--rule); margin: 3rem 0; }
   column-gap: 1.5rem;
 }
 .brands { display: flex; align-items: center; gap: 1.1rem; min-height: 78px; }
-.brand img { height: 42px; width: auto; }
+.brand img { height: 32px; width: auto; }  /* matched to the UAlberta logo by visual area */
 .ua-brand { padding-right: 1.1rem; border-right: 1px solid var(--rule); }
 .ua-brand img { height: 36px; width: auto; }
 .ua-brand:hover img { opacity: .8; }
@@ -136,7 +136,7 @@ hr { border: 0; border-top: 1px solid var(--rule); margin: 3rem 0; }
 }
 @media (max-width: 520px) {
   .brands { gap: .7rem; }
-  .brand img { height: 24px; }
+  .brand img { height: 18px; }
   .ua-brand { padding-right: .7rem; }
   .ua-brand img { height: 21px; }
   .nav-toggle { padding: .4rem .55rem; font-size: .8rem; }
