@@ -29,6 +29,11 @@ upcoming:
   - code: MEC E 675
     title: Product Design and Optimization for Additive Manufacturing
     terms: TBD
+    url: https://apps.ualberta.ca/catalogue/course/mec_e/675
+    description: Overview of general additive manufacturing (AM) processes and their
+      design guidelines and principles. Design for Additive Manufacturing (DfAM)
+      frameworks. Structural design and optimization in AM, considering
+      fundamental engineering design principles and build-process simulation.
 previous:
   - code: MEC E 663
     title: Theory and Applications in Finite Element Method
