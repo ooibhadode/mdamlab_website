@@ -1,23 +1,34 @@
-# ---------------------------------------------------------------
-#  TEACHING — courses taught by Dr. Ibhadode
-#  Move a course from `current` to `previous` once the term ends.
-# ---------------------------------------------------------------
-
 current:
+  - code: MEC E 364
+    title: Manufacturing Processes
+    terms: Fall 2026
+    url: https://apps.ualberta.ca/catalogue/course/mec_e/364
+    description: Primary manufacturing processes, including casting, forming,
+      machining, additive manufacturing, powder metallurgy and surface
+      technology. Interactions between design, materials and processes, and
+      laboratory activities.
+upcoming:
+  - code: MEC E 563
+    title: Finite Element Method for Mechanical Engineering
+    terms: Winter 2027
+    url: https://apps.ualberta.ca/catalogue/course/mec_e/563
+    description: "Application of finite element methods to mechanical engineering
+      problems; topics include direct stiffness methods, assembly, constraints,
+      solution techniques, post-processing, element types, and the Galerkin
+      procedure. Applications include beam, truss, and frame analysis, plane
+      strain and stress problems, heat transfer, and dynamic analysis.
+      Prerequisites: MATH 300, MEC E 360, 390."
+  - code: MEC E 364
+    title: Manufacturing Processes
+    terms: Winter 2027
+    url: https://apps.ualberta.ca/catalogue/course/mec_e/364
+    description: Primary manufacturing processes, including casting, forming,
+      machining, additive manufacturing, powder metallurgy and surface
+      technology. Interactions between design, materials and processes, and
+      laboratory activities.
   - code: MEC E 675
     title: Product Design and Optimization for Additive Manufacturing
-    terms: Fall 2026
-    description: >-
-      Graduate course on designing parts for additive manufacturing:
-      topology optimization, lattice and porous structures, and the process
-      constraints that decide whether a design can actually be printed.
-
-upcoming: []
-  # - code: MEC E 563
-  #   title: Finite Element Method for Mechanical Engineering
-  #   terms: Winter 2027
-  #   url: https://apps.ualberta.ca/catalogue/course/mec_e/563
-
+    terms: TBD
 previous:
   - code: MEC E 663
     title: Theory and Applications in Finite Element Method
