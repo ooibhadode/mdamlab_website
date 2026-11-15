@@ -167,7 +167,9 @@ lede: >-
 
 <hr>
 
-{%- capture dra_mail -%}mailto:mdamlab@ualberta.ca?cc=ibhadode@ualberta.ca&amp;subject=Dean%27s%20Research%20Award%20project%20-%20expression%20of%20interest{%- endcapture -%}
+{%- assign dra_to = "mdamlab@ualberta.ca" -%}
+{%- assign dra_cc = "ibhadode@ualberta.ca" -%}
+{%- assign dra_subject = "Dean%27s%20Research%20Award%20project%20-%20expression%20of%20interest" -%}
 <section class="hiring" id="dra" aria-labelledby="dra-title">
   <p class="eyebrow">Undergraduate research · Winter 2027</p>
   <h2 id="dra-title">Dean's Research Award projects</h2>
@@ -228,7 +230,13 @@ lede: >-
       <li>Prepare your CV, your transcript, and the project you prefer.</li>
       <li>Email them to <a href="mailto:mdamlab@ualberta.ca">mdamlab@ualberta.ca</a>, copying <a href="mailto:ibhadode@ualberta.ca">ibhadode@ualberta.ca</a>, by <strong>December 16, 2026</strong>.</li>
     </ol>
-    <p><a class="btn" href="{{ dra_mail }}">Email your DRA expression of interest</a></p>
+    <p class="mail-label"><strong>Email your DRA expression of interest:</strong></p>
+    <p class="mail-actions">
+      <a class="btn" href="https://mail.google.com/mail/?view=cm&amp;fs=1&amp;to={{ dra_to }}&amp;cc={{ dra_cc }}&amp;su={{ dra_subject }}" target="_blank" rel="noopener">Compose in Gmail ↗</a>
+      <a class="btn" href="https://outlook.office.com/mail/deeplink/compose?to={{ dra_to }}&amp;cc={{ dra_cc }}&amp;subject={{ dra_subject }}" target="_blank" rel="noopener">Compose in Outlook ↗</a>
+      <a class="btn ghost" href="mailto:{{ dra_to }}?cc={{ dra_cc }}&amp;subject={{ dra_subject }}">Use email app</a>
+      <button type="button" class="btn ghost" id="copy-dra" data-copy="To: {{ dra_to }}; Cc: {{ dra_cc }}">Copy addresses</button>
+    </p>
     <p class="small muted">This email route is for Dean's Research Award projects only. Applications for the 2027 positions above must use the online form.</p>
   </div>
 </section>
@@ -259,3 +267,19 @@ lede: >-
   <h2>Graduate studies at the University of Alberta</h2>
   <p>Prospective MSc and PhD students apply through the Department of Mechanical Engineering. Admission requirements, deadlines and application steps are on the department's graduate program website. Please mention the MDAM Lab and Dr. Ibhadode in your application.</p>
 </div>
+
+<script>
+  (function () {
+    var b = document.getElementById('copy-dra');
+    if (!b) return;
+    b.addEventListener('click', function () {
+      var text = b.getAttribute('data-copy');
+      var done = function () { b.textContent = 'Copied!'; setTimeout(function () { b.textContent = 'Copy addresses'; }, 2000); };
+      if (navigator.clipboard && navigator.clipboard.writeText) {
+        navigator.clipboard.writeText(text).then(done, function () { window.prompt('Copy these addresses:', text); });
+      } else {
+        window.prompt('Copy these addresses:', text);
+      }
+    });
+  })();
+</script>

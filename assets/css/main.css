@@ -451,6 +451,9 @@ figcaption b { color: var(--ink-2); font-weight: 600; }
 .dra-apply { max-width: 46rem; padding-top: 1.2rem; }
 .dra-apply .eyebrow { margin-bottom: .2rem; }
 .dra-apply .sub-head { margin-top: 0; }
+.mail-label { margin: 1.2rem 0 .5rem; font-size: .95rem; }
+.mail-actions { display: flex; flex-wrap: wrap; gap: .5rem; }
+button.btn { cursor: pointer; }
 
 .callout { background: var(--paper-2); border-left: 3px solid var(--green); padding: 1.4rem 1.6rem; margin: 0 0 3rem; }
 .callout p:last-child { margin: 0; }
