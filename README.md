@@ -29,7 +29,7 @@ The site is built with [Jekyll](https://jekyllrb.com/) and hosted free on **GitH
 
 You only need this to see changes before you publish them.
 
-1. Install Ruby: on Windows use [RubyInstaller](https://rubyinstaller.org/) (choose "Ruby+Devkit"); on macOS use `brew install ruby`.
+1. Install **Ruby 3.3** (GitHub Pages does not support Ruby 4 yet): on Windows use [RubyInstaller](https://rubyinstaller.org/downloads/) and choose "Ruby+Devkit 3.3.x (x64)"; on macOS use `brew install ruby@3.3`.
 2. In this folder, run `gem install bundler` and then `bundle install`.
 3. Run `bundle exec jekyll serve`, then open <http://localhost:4000>.
 
