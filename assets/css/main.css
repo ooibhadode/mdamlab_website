@@ -451,6 +451,16 @@ figcaption b { color: var(--ink-2); font-weight: 600; }
 .dra-apply { max-width: 46rem; padding-top: 1.2rem; }
 .dra-apply .eyebrow { margin-bottom: .2rem; }
 .dra-apply .sub-head { margin-top: 0; }
+.programs { margin-top: 3rem; scroll-margin-top: 140px; }
+.programs > h3 { font-size: 1.4rem; }
+.program-cards { display: grid; grid-template-columns: 1fr 1fr; gap: 1.5rem; margin-top: 1.2rem; }
+@media (max-width: 860px) { .program-cards { grid-template-columns: 1fr; } }
+.program-cards.single { grid-template-columns: 1fr; max-width: 46rem; }
+.program-card { background: #fff; border: 1px solid var(--rule); border-top: 3px solid var(--gold); padding: 1.4rem 1.5rem; display: flex; flex-direction: column; }
+.program-card h4 { font-size: 1.2rem; margin-bottom: .6rem; }
+.program-card p { font-size: .95rem; }
+.program-card .eyebrow { margin-bottom: .5rem; }
+.program-links { margin: auto 0 0; padding-top: .4rem; display: flex; flex-wrap: wrap; align-items: center; gap: .6rem 1.2rem; }
 .mail-label { margin: 1.2rem 0 .5rem; font-size: .95rem; }
 .mail-actions { display: flex; flex-wrap: wrap; gap: .5rem; }
 button.btn { cursor: pointer; }
