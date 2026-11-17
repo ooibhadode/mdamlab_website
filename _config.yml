@@ -29,6 +29,10 @@ logo: /assets/images/brand/mdam-logo.png
 # News posts live in _posts/ and are served at /news/YYYY/post-name/
 permalink: /news/:year/:title/
 
+# Google Analytics 4 Measurement ID (looks like G-XXXXXXXXXX).
+# Leave blank to turn tracking off. Only runs on the live site.
+google_analytics: "G-XLXPW00D7D"
+
 timezone: America/Edmonton
 markdown: kramdown
 kramdown:

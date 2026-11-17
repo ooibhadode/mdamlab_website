@@ -18,7 +18,7 @@ lede: >-
       <p>The project will be conducted in collaboration with industry partners, connecting fundamental research with practical engineering challenges.</p>
       <p class="hiring-meta"><strong>Location:</strong> University of Alberta, North Campus, Edmonton, Alberta</p>
       <p class="hiring-cta">
-        <a class="btn" href="{{ apply_url }}" target="_blank" rel="noopener">Apply online ↗</a>
+        <a class="btn" data-track="apply_form_click" data-track-label="top_button" href="{{ apply_url }}" target="_blank" rel="noopener">Apply online ↗</a>
         <a class="btn ghost" href="#positions">See positions</a>
       </p>
     </div>
@@ -156,7 +156,7 @@ lede: >-
         <li>Prepare a brief statement of research interest, a CV or resume, academic transcripts, and referee contact information.</li>
         <li>Submit everything through the online application form.</li>
       </ol>
-      <p><a class="btn" href="{{ apply_url }}" target="_blank" rel="noopener">Apply here (Google Form) ↗</a></p>
+      <p><a class="btn" data-track="apply_form_click" data-track-label="how_to_apply" href="{{ apply_url }}" target="_blank" rel="noopener">Apply here (Google Form) ↗</a></p>
       <p class="small"><strong>Email applications for these positions will not be reviewed.</strong> Research outputs or technical writing samples may be requested from graduate and postdoctoral applicants.</p>
     </div>
   </div>
@@ -232,10 +232,10 @@ lede: >-
     </ol>
     <p class="mail-label"><strong>Email your DRA expression of interest:</strong></p>
     <p class="mail-actions">
-      <a class="btn" href="https://mail.google.com/mail/?view=cm&amp;fs=1&amp;to={{ dra_to }}&amp;cc={{ dra_cc }}&amp;su={{ dra_subject }}" target="_blank" rel="noopener">Compose in Gmail ↗</a>
-      <a class="btn" href="https://outlook.office.com/mail/deeplink/compose?to={{ dra_to }}&amp;cc={{ dra_cc }}&amp;subject={{ dra_subject }}" target="_blank" rel="noopener">Compose in Outlook ↗</a>
-      <a class="btn ghost" href="mailto:{{ dra_to }}?cc={{ dra_cc }}&amp;subject={{ dra_subject }}">Use email app</a>
-      <button type="button" class="btn ghost" id="copy-dra" data-copy="To: {{ dra_to }}; Cc: {{ dra_cc }}">Copy addresses</button>
+      <a class="btn" data-track="dra_interest_click" data-track-label="gmail" href="https://mail.google.com/mail/?view=cm&amp;fs=1&amp;to={{ dra_to }}&amp;cc={{ dra_cc }}&amp;su={{ dra_subject }}" target="_blank" rel="noopener">Compose in Gmail ↗</a>
+      <a class="btn" data-track="dra_interest_click" data-track-label="outlook" href="https://outlook.office.com/mail/deeplink/compose?to={{ dra_to }}&amp;cc={{ dra_cc }}&amp;subject={{ dra_subject }}" target="_blank" rel="noopener">Compose in Outlook ↗</a>
+      <a class="btn ghost" data-track="dra_interest_click" data-track-label="email_app" href="mailto:{{ dra_to }}?cc={{ dra_cc }}&amp;subject={{ dra_subject }}">Use email app</a>
+      <button type="button" class="btn ghost" id="copy-dra" data-track="dra_interest_click" data-track-label="copy_addresses" data-copy="To: {{ dra_to }}; Cc: {{ dra_cc }}">Copy addresses</button>
     </p>
     <p class="small muted">This email route is for Dean's Research Award projects only. Applications for the 2027 positions above must use the online form.</p>
   </div>

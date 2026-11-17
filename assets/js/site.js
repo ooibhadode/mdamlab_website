@@ -34,3 +34,16 @@
     imgs[i].classList.add('on');
   }, 6000);
 })();
+
+// Analytics: report clicks on elements marked data-track="event_name"
+// (optional data-track-label="detail"). Does nothing when Google Analytics is off.
+(function () {
+  document.addEventListener('click', function (e) {
+    var el = e.target.closest ? e.target.closest('[data-track]') : null;
+    if (!el || typeof window.gtag !== 'function') return;
+    window.gtag('event', el.getAttribute('data-track'), {
+      method: el.getAttribute('data-track-label') || '',
+      page_path: window.location.pathname
+    });
+  });
+})();
